@@ -32,9 +32,10 @@ public class MergeSortTest {
 	@Test
 	public final void testMergeSort() {
 
-			MergeSort sorter = new MergeSort();
+			int[] sortedArray = Arrays.copyOf(shuffledArray, shuffledArray.length);
+
+			MergeSort.mergeSort(sortedArray);
 			
-			int[] sortedArray = sorter.mergeSort(shuffledArray);			
 			logger.info("Sorted array: " + Arrays.toString(sortedArray));
 
 			assertArrayEquals("mergeSort works", expectedArray, sortedArray);
