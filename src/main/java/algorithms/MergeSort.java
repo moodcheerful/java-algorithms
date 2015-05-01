@@ -1,10 +1,8 @@
 package algorithms;
 
-import java.util.List;
-
 public class MergeSort {
 
-	public List<Integer> mergeSort(List<Integer> list) {
+	public int[] mergeSort(int[] arr) {
 		// TODO
 		return null;
 	}

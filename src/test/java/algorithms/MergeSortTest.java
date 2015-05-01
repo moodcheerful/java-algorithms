@@ -1,8 +1,5 @@
 package algorithms;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 import org.apache.log4j.Logger;
@@ -16,19 +13,20 @@ public class MergeSortTest {
 
 	private final static Logger logger = Logger.getLogger(MergeSortTest.class);
 
-	private static List<Integer> expectedList;
-	private static List<Integer> shuffledList;
+	private static int[] expectedArray;
+	private static int[] shuffledArray;
 
 	@BeforeClass
 	public static void setUpBeforeClass() {
 
-		expectedList = new ArrayList<Integer>(Arrays.asList(-5, -1, 0, 2, 2, 5, 7, 100));
+		expectedArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+		shuffledArray = Arrays.copyOf(expectedArray, expectedArray.length);
+
+		KnuthShuffle.shuffleArray(shuffledArray);
 		
-		shuffledList = new ArrayList<Integer>(expectedList);
-		Collections.shuffle(shuffledList);
-		
-		logger.info("Expected list: " + expectedList);
-		logger.info("Shuffled list: " + shuffledList);
+		logger.info("Expected array: " + Arrays.toString(expectedArray));
+		logger.info("Shuffled array: " + Arrays.toString(shuffledArray));
 	}
 
 	@Test
@@ -36,9 +34,9 @@ public class MergeSortTest {
 
 			MergeSort sorter = new MergeSort();
 			
-			List<Integer> sortedList = sorter.mergeSort(shuffledList);			
-			logger.info("Sorted list: " + sortedList);
-			
-			assertArrayEquals("mergeSort works", expectedList.toArray(), sortedList.toArray());
+			int[] sortedArray = sorter.mergeSort(shuffledArray);			
+			logger.info("Sorted array: " + Arrays.toString(sortedArray));
+
+			assertArrayEquals("mergeSort works", expectedArray, sortedArray);
 	}
 }
