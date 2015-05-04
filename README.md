@@ -30,18 +30,17 @@ Repo's tree view:
 
 ##### Array Sorting Algorithms:
 
-Algorithm | Time Complexity | |	| Space Complexity
+Algorithm | Time Complexity | Space Complexity | Stable | Method
 :--- |:---:|:---:|:---:|:---:
-  | **Best** | **Average** | **Worst** | **Worst**
-Quicksort | O(n log(n))	| O(n log(n)) | O(n^2) | O(log(n))
-Mergesort | O(n log(n)) | O(n log(n)) | O(n log(n)) | O(n)
-Heapsort | O(n log(n)) | O(n log(n)) | O(n log(n)) | O(1)
-Bubble Sort	| O(n) | O(n^2)	| O(n^2) | O(1)
-Insertion Sort | O(n) | O(n^2) | O(n^2) | O(1)
-Selection Sort | O(n^2)	| O(n^2) | O(n^2) | O(1)
-Shell Sort | O(n) | O((nlog(n))^2) | O((nlog(n))^2)	| O(1)
-Bucket Sort	| O(n+k) | O(n+k) | O(n^2) | O(n)
-Radix Sort | O(nk) | O(nk) | O(nk) | O(n+k)
+Quicksort | O(n log(n))	| log(n) | No | Partitioning
+Mergesort | O(n log(n)) | n | Yes | Merging
+Heapsort | O(n log(n)) | 1 | No | Selection
+Insertion Sort | O(n^2) | 1 | Yes | Insertion
+Selection Sort | O(n^2) | 1 | No | Selection
+Bubble Sort	| O(n^2) | 1 | Yes | Exchanging
+Shell Sort | O(n (log(n))^2) | 1 | No | Insertion
+Bucket Sort	| O(n+k) | O(n) | Yes | (Non-comparison sort)
+Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 
 ---
 
