@@ -6,7 +6,7 @@ public class MergeSort {
 	// Time complexity is O(n*log(n))
 
 	public static void mergeSort(int[] a) {
-		
+
 		int[] b = new int[a.length];
 		sort(a, b, 0, a.length - 1);
 	}
@@ -25,22 +25,24 @@ public class MergeSort {
 	// precondition: a[lo .. mid] and a[mid+1 .. hi] are sorted subarrays
 	private static void merge(int[] a, int[] b, int lo, int mid, int hi) {
 
-		// copy to b[]
-		for (int k = lo; k <= hi; k++) {
+		// copy to b[]:
+		for (int k = lo; k <= hi; k++) {			
 			b[k] = a[k];
 		}
 
-		// merge back to a[]
-		int i = lo, j = mid + 1;
+		// merge back to a[]:
+		int i = lo;
+		int j = mid + 1;
 		for (int k = lo; k <= hi; k++) {
-			if (i > mid)
-				a[k] = b[j++]; // this copying is unnecessary
-			else if (j > hi)
-				a[k] = b[i++];
-			else if (b[j] < b[i])
-				a[k] = b[j++];
-			else
-				a[k] = b[i++];
+			
+			// if left run head exists and is <= existing right run head:
+			if ((i <= mid) && (j > hi || b[i] <= b[j]) ) {
+				a[k] = b[i];
+				i++;
+			} else {
+				a[k] = b[j];
+				j++;
+			}
 		}
 	}
 }
