@@ -1,11 +1,11 @@
 package algorithms;
 
-import java.util.List;
-
 public class QuickSort {
 
-	public List<Integer> quickSort(List<Integer> list) {
+	// QuickSort algorithm
+	// Time complexity is O(n*log(n))
+
+	public static void quickSort(int[] a) {
 		// TODO
-		return null;
 	}
 }
