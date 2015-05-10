@@ -1,6 +1,7 @@
 package algorithms;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 import org.apache.log4j.Logger;
 
@@ -13,17 +14,17 @@ public class QuickSortTest {
 
 	private final static Logger logger = Logger.getLogger(QuickSortTest.class);
 
-	private static int[] expectedArray;
-	private static int[] shuffledArray;
+	private static String[] expectedArray;
+	private static String[] shuffledArray;
 
 	@BeforeClass
 	public static void setUpBeforeClass() {
-
-		expectedArray = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
+		
+		expectedArray = new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" };
+		
 		shuffledArray = Arrays.copyOf(expectedArray, expectedArray.length);
 
-		KnuthShuffle.shuffleArray(shuffledArray);
+		Collections.shuffle(Arrays.asList(shuffledArray));
 		
 		logger.info("Expected array: " + Arrays.toString(expectedArray));
 		logger.info("Shuffled array: " + Arrays.toString(shuffledArray));
@@ -32,7 +33,7 @@ public class QuickSortTest {
 	@Test
 	public final void testQuickSort() {
 
-			int[] sortedArray = Arrays.copyOf(shuffledArray, shuffledArray.length);
+			String[] sortedArray = Arrays.copyOf(shuffledArray, shuffledArray.length);
 
 			QuickSort.quickSort(sortedArray);
 			
