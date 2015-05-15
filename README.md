@@ -40,13 +40,13 @@ linearithmic | n log n | divide and conquer | mergesort
 quadratic | n^2 | double loop | check all pairs; bubble sort
 cubic | n^3 | triple loop | check all triples
 exponential | 2^n | exhaustive search | check all subsets
-factorial | n! | brute-force search | travelling salesman problem solved by brute force
+factorial | n! | brute-force | travelling salesman problem solved by brute force
 
 ---
 
 #### Array Sorting Algorithms:
 
-A Sorting Lower Bound: every "comparison-based" sorting algorithm has worst-case running time of Ω(n log n)
+A Sorting Lower Bound: every "comparison-based" sorting algorithm has worst-case running time of Ω(n log n).
 
 Algorithm | Time Complexity | Space Complexity | Stable | Method
 :--- |:---:|:---:|:---:|:---:
