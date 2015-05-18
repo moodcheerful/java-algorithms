@@ -10,6 +10,7 @@ Repo's tree view:
 │   ├── main
 │   │   ├── java
 │   │   │   ├── algorithms
+│   │   │   │   ├── BinarySearch.java
 │   │   │   │   ├── HeapSort.java
 │   │   │   │   ├── KnuthShuffle.java
 │   │   │   │   ├── MergeSort.java
@@ -20,6 +21,7 @@ Repo's tree view:
 │   └── test
 │       └── java
 │           └── algorithms
+│               ├── BinarySearchTest.java
 │               ├── HeapSortTest.java
 │               ├── KnuthShuffleTest.java
 │               ├── MergeSortTest.java
