@@ -19,7 +19,7 @@ public class HeapSort {
 	// Then the remaining heap is updated after each removal to maintain the heap property.
 	
 	
-	public static <Type extends Comparable<Type>> void heapSort(Type[] heap) {
+	public static <T extends Comparable<T>> void heapSort(T[] heap) {
 		
 		int N = heap.length;
 		
@@ -39,7 +39,7 @@ public class HeapSort {
 	}
 
 	// Sink-based heap construction is linear time
-	private static <Type extends Comparable<Type>> void sink(Type[] heap, int k, int N) {
+	private static <T extends Comparable<T>> void sink(T[] heap, int k, int N) {
 		
 		while (2*k <= N) {
 			
@@ -57,7 +57,7 @@ public class HeapSort {
 	}
 
 	// Indexes are "off-by-one" to support 1-based heap indexing
-	private static <Type extends Comparable<Type>> boolean less(Type[] heap, int i, int j) {
+	private static <T extends Comparable<T>> boolean less(T[] heap, int i, int j) {
 		
 		return heap[i - 1].compareTo(heap[j - 1]) < 0;
 	}
@@ -72,9 +72,9 @@ public class HeapSort {
 	
 	// The artificial solution: double the memory use by creating a new PriorityQueue and 
 	// let Java Collections API do its sorting
-	public static <Type extends Comparable<Type>> void heapSortPriorityQueue(Type[] c) {
+	public static <T extends Comparable<T>> void heapSortPriorityQueue(T[] c) {
 		
-	    Queue<Type> queue = new PriorityQueue<Type>(Arrays.asList(c));
+	    Queue<T> queue = new PriorityQueue<T>(Arrays.asList(c));
 	    
 	    for (int i = 0; i < c.length; i++) {
 	    	c[i] = queue.remove();
