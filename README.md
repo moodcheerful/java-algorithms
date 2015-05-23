@@ -11,6 +11,7 @@ Repo's tree view:
 │   │   ├── java
 │   │   │   ├── algorithms
 │   │   │   │   ├── BinarySearch.java
+│   │   │   │   ├── GreatestCommonDivisor.java
 │   │   │   │   ├── HeapSort.java
 │   │   │   │   ├── KnuthShuffle.java
 │   │   │   │   ├── MergeSort.java
@@ -22,6 +23,7 @@ Repo's tree view:
 │       └── java
 │           └── algorithms
 │               ├── BinarySearchTest.java
+│               ├── GreatestCommonDivisorTest.java
 │               ├── HeapSortTest.java
 │               ├── KnuthShuffleTest.java
 │               ├── MergeSortTest.java
