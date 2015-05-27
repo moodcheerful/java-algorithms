@@ -15,7 +15,8 @@ Repo's tree view:
 │   │   │   │   ├── HeapSort.java
 │   │   │   │   ├── KnuthShuffle.java
 │   │   │   │   ├── MergeSort.java
-│   │   │   │   └── QuickSort.java
+│   │   │   │   ├── QuickSort.java
+│   │   │   │   └── SelectKthSmallest.java
 │   │   │   └── utils
 │   │   └── resources
 │   │       └── log4j.properties
@@ -27,7 +28,8 @@ Repo's tree view:
 │               ├── HeapSortTest.java
 │               ├── KnuthShuffleTest.java
 │               ├── MergeSortTest.java
-│               └── QuickSortTest.java
+│               ├── QuickSortTest.java
+│               └── SelectKthSmallestTest.java
 └── target
 ```
 
@@ -50,7 +52,13 @@ factorial | n! | brute-force | travelling salesman problem solved by brute force
 
 #### Array Sorting Algorithms:
 
-A Sorting Lower Bound: every "comparison-based" sorting algorithm has worst-case running time of Ω(n log n).
+- __A Sorting Lower Bound__: every "comparison-based" sorting algorithm has worst-case running time of __Ω(n log n)__.
+- __Stable__ sort preserves the relative order of equal keys in the array.
+- __Quicksort__ is the fastest general-purpose sort, but it's not stable. 
+- __Mergesort__ might be best if stability is important and space is available.
+- __Java's system sort__ method `Arrays.sort()` in the `java.util` library is overloaded:
+	- for primitive types: quicksort (with 3-way partitioning) - for speed and memory usage
+	- for reference types: mergesort with insertion sort after a small size threshold  - for stability and guaranteed performance
 
 Algorithm | Time Complexity | Space Complexity | Stable | Method
 :--- |:---:|:---:|:---:|:---:
