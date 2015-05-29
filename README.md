@@ -11,6 +11,8 @@ Repo's tree view:
 │   │   ├── java
 │   │   │   ├── algorithms
 │   │   │   │   ├── BinarySearch.java
+│   │   │   │   ├── BreadthFirstSearch.java
+│   │   │   │   ├── DepthFirstSearch.java
 │   │   │   │   ├── GreatestCommonDivisor.java
 │   │   │   │   ├── HeapSort.java
 │   │   │   │   ├── KnuthShuffle.java
@@ -18,12 +20,15 @@ Repo's tree view:
 │   │   │   │   ├── QuickSort.java
 │   │   │   │   └── SelectKthSmallest.java
 │   │   │   └── utils
+│   │   │       └── Graph.java
 │   │   └── resources
 │   │       └── log4j.properties
 │   └── test
 │       └── java
 │           └── algorithms
 │               ├── BinarySearchTest.java
+│               ├── BreadthFirstSearchTest.java
+│               ├── DepthFirstSearchTest.java
 │               ├── GreatestCommonDivisorTest.java
 │               ├── HeapSortTest.java
 │               ├── KnuthShuffleTest.java
