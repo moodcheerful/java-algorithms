@@ -38,16 +38,16 @@ public class BreadthFirstSearchTest {
 		 *  6: 7
 		 *  7: 6
 		 *  
-		 *  | ── 0 ── |
-		 *  |    |    |
-		 *  |    1 ── 2 ── |
-		 *  |         |    |
-		 *  5 ─────── 3 ── 4
+		 *     0 
+		 *   / | \ 
+		 *  |  1 ─ 2
+		 *  |      | \
+		 *  5 ──── 3 ─ 4
 		 *  	
-		 *  6 ── 7
+		 *  6 ─ 7
 		 *  
 		 */
-		
+		 
 		Set<Integer> set0 = new HashSet<Integer>(Arrays.asList(5, 1, 2));
 		Set<Integer> set1 = new HashSet<Integer>(Arrays.asList(2, 0));
 		Set<Integer> set2 = new HashSet<Integer>(Arrays.asList(4, 3, 1, 0));
