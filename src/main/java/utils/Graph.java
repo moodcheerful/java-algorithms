@@ -19,13 +19,13 @@ import java.util.Set;
  *  6: 7
  *  7: 6
  *  
- *  | ── 0 ── |
- *  |    |    |
- *  |    1 ── 2 ── |
- *  |         |    |
- *  5 ─────── 3 ── 4
+ *     0 
+ *   / | \ 
+ *  |  1 ─ 2
+ *  |      | \
+ *  5 ──── 3 ─ 4
  *  	
- *  6 ── 7
+ *  6 ─ 7
  *  
  */
 public class Graph {
@@ -54,7 +54,8 @@ public class Graph {
         return adjacencyList.get(v);
     }
     
-    // return a string representation of the graph in O(N + M) time:
+    // return a string representation of the graph in O(N + M) time,
+    // where N is the number of vertices and M is the number of edges:
     @Override
     public String toString() {
     	

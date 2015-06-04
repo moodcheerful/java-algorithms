@@ -2,52 +2,50 @@ package utils;
 
 import java.util.List;
 import java.util.ArrayList;
-import java.util.Set;
-import java.util.HashSet;
 
 /**
  *  A directed graph of vertices named 0 through N - 1. 
  *  Parallel edges and self-loops are NOT allowed.
- *  The implementation uses an adjacency list (an arraylist of sets), 
+ *  The implementation uses an adjacency list (an arraylist of lists), 
  *  in which each edge is listed only once.
  * 
  *  An example of a directed acyclical graph (DAG) with 13 vertices, 15 edges:
  *  
  *  The list of edges:
  *  
- *  2 3 
- *  0 6 
- *  0 1 
- *  2 0 
- *  11 12  
- *  9 12  
- *  9 10  
- *  9 11 
- *  3 5 
- *  8 7 
- *  5 4 
- *  0 5 
- *  6 4 
- *  6 9 
- *  7 6
+ *    2 0
+ *    0 5 
+ *    0 1 
+ *    2 3 
+ *    11 12  
+ *    9 11 
+ *    9 10  
+ *    9 12
+ *    3 5 
+ *    8 7 
+ *    5 4 
+ *    0 6 
+ *    6 9 
+ *    6 4 
+ *    7 6
+ *    
+ *    Corresponding adjacency List (each edge listed only once):
+ *      
+ *      0: 5 1 6
+ *      1: 
+ *      2: 0 3 
+ *      3: 5 
+ *      4: 
+ *      5: 4 
+ *      6: 9 4
+ *      7: 6
+ *      8: 7
+ *      9: 11 10 12
+ *      10: 
+ *      11: 12 
+ *      12:   
  *  
- *  Corresponding Adjacency List (each edge listed only once):
- *  
- *  0: 5 1 6
- *  1: 
- *  2: 0 3 
- *  3: 5 
- *  4: 
- *  5: 4 
- *  6: 9 4
- *  7: 6
- *  8: 7
- *  9: 11 10 12
- *  10: 
- *  11: 12 
- *  12:  
- *  
- *  Topological Order:
+ *  Topological order:
  *  
  *           |------------------------->|
  *           |  |---------------------->|
@@ -62,7 +60,7 @@ import java.util.HashSet;
 public class DirectedGraph {
 	
     private int N;
-    private List<Set<Integer>> adjacencyList;
+    private List<List<Integer>> adjacencyList;
       
     // construct a directed graph of N vertices from the list of edges:
 	public DirectedGraph(int N, List<List<Integer>> edgesList) {
@@ -70,12 +68,12 @@ public class DirectedGraph {
 		this.N = N;
 		
 		// initialize a new adjacency list of size N:
-		this.adjacencyList = new ArrayList<Set<Integer>>(N);		
+		this.adjacencyList = new ArrayList<List<Integer>>(N);		
 		for (int v = 0; v < N; v++) {
-			this.adjacencyList.set(v, new HashSet<Integer>());
+			this.adjacencyList.add(new ArrayList<Integer>());
 		}
 		
-		// add each edge to the adjacency list only once:
+		// add each edge from edgesList to the adjacency list only once:
 		for (List<Integer> pair : edgesList) {
 			int v = pair.get(0);
 			int w = pair.get(1);
@@ -103,7 +101,7 @@ public class DirectedGraph {
     }
 	
 	// return the vertices adjacent from vertex v in the directed graph:
-    public Set<Integer> adjacentVertices(int v) {
+    public List<Integer> adjacentVertices(int v) {
 		validateVertex(v);		
         return adjacencyList.get(v);
     }
