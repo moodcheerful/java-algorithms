@@ -11,6 +11,13 @@ import utils.DirectedGraph;
  * Compute depth-first search ordering of the vertices in a directed acyclical graph (DAG), 
  * including preorder, postorder, and reverse postorder.
  * 
+ * Preorder: root, left, right
+ * Postorder: left, right, root
+ * Inorder: left, root, right
+ * Reverse preorder: root, right, left
+ * Reverse postorder: right, left, root
+ * Reverse inorder: right, root, left
+ * 
  * This implementation uses depth-first search.
  * 
  * Time complexity is O(N + M), 

@@ -13,13 +13,17 @@ Repo's tree view:
 │   │   │   │   ├── BinarySearch.java
 │   │   │   │   ├── BreadthFirstSearch.java
 │   │   │   │   ├── DepthFirstSearch.java
+│   │   │   │   ├── DepthFirstSearchNonRecursive.java
+│   │   │   │   ├── DirectedGraphOrder.java
 │   │   │   │   ├── GreatestCommonDivisor.java
 │   │   │   │   ├── HeapSort.java
 │   │   │   │   ├── KnuthShuffle.java
 │   │   │   │   ├── MergeSort.java
 │   │   │   │   ├── QuickSort.java
-│   │   │   │   └── SelectKthSmallest.java
+│   │   │   │   ├── SelectKthSmallest.java
+│   │   │   │   └── TopologicalSort.java
 │   │   │   └── utils
+│   │   │       ├── DirectedGraph.java
 │   │   │       └── Graph.java
 │   │   └── resources
 │   │       └── log4j.properties
@@ -28,13 +32,16 @@ Repo's tree view:
 │           └── algorithms
 │               ├── BinarySearchTest.java
 │               ├── BreadthFirstSearchTest.java
+│               ├── DepthFirstSearchNonRecursiveTest.java
 │               ├── DepthFirstSearchTest.java
+│               ├── DirectedGraphOrderTest.java
 │               ├── GreatestCommonDivisorTest.java
 │               ├── HeapSortTest.java
 │               ├── KnuthShuffleTest.java
 │               ├── MergeSortTest.java
 │               ├── QuickSortTest.java
-│               └── SelectKthSmallestTest.java
+│               ├── SelectKthSmallestTest.java
+│               └── TopologicalSortTest.java
 └── target
 ```
 
