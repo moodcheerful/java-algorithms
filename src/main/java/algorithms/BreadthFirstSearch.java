@@ -11,7 +11,7 @@ import utils.Graph;
 
 /**
  * Breadth First Search algorithm of finding shortest paths
- * from a start vertex s to every other vertex in an undirected graph.
+ * from a source vertex s to every other vertex in an undirected graph.
  * 
  * Time complexity is O(N + M),
  * where N is the number of vertices and M is the number of edges.
@@ -20,16 +20,16 @@ public class BreadthFirstSearch {
 	
 	public static final Logger logger = Logger.getLogger(BreadthFirstSearch.class);
 	
-	// visited[v]: is there a path from the start vertex s to v
+	// visited[v]: is there a path from the source vertex s to v
 	private boolean[] visited; 
 	
-	// distTo[v]: number of edges of the shortest path from the start vertex s to v
+	// distTo[v]: number of edges of the shortest path from the source vertex s to v
 	private int[] distTo; 
 	
-	// edgeTo[v]: previous edge on the shortest path from the start vertex s to v
+	// edgeTo[v]: previous edge on the shortest path from the source vertex s to v
 	private int[] edgeTo; 
 	
-	// compute the shortest path from the start vertex s to 
+	// compute the shortest path from the source vertex s to 
 	// every other vertex in the graph
 	public BreadthFirstSearch(Graph graph, int s) {
 		
@@ -44,10 +44,10 @@ public class BreadthFirstSearch {
 		bfs(graph, s);
 	}
 
-	// Breadth First Search from the start vertex s
+	// Breadth First Search from the source vertex s
 	private void bfs(Graph graph, int s) {
 
-		// base case for start vertex s:
+		// base case for source vertex s:
 		visited[s] = true;
 		distTo[s] = 0;
 		for (int v = 1; v < graph.getN(); v++) {
@@ -81,17 +81,17 @@ public class BreadthFirstSearch {
 		}
 	}
 	
-    // return true if there is a path from the start vertex s to v:
+    // return true if there is a path from the source vertex s to v:
 	public boolean hasPathTo(int v) {
 		return visited[v];
 	}
 
-    // return the number of edges in a shortest path from the start vertex s to v:
+    // return the number of edges in a shortest path from the source vertex s to v:
 	public int distTo(int v) {
 		return distTo[v];
 	}
 
-    // return a shortest path from the start vertex s to v, or null if there is no path:
+    // return a shortest path from the source vertex s to v, or null if there is no path:
 	public Deque<Integer> shortestPathTo(int v) {
 		
 		if (!hasPathTo(v)) {
@@ -109,7 +109,7 @@ public class BreadthFirstSearch {
 		return path;
 	}
 	
-    // return a string representation of the shortest paths from the start vertex s;
+    // return a string representation of the shortest paths from the source vertex s;
 	// runs in O(N + M) time
 	public String printPaths(Graph graph, int s) {
 		

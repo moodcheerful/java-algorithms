@@ -74,7 +74,7 @@ public class DepthFirstSearchNonRecursiveTest {
 
 		logger.info(dfs.printConnected(graph, s));
 		
-		// number of vertices connected to the start vertex s:
+		// number of vertices connected to the source vertex s:
 		int expected = 6;
 		
 		Assert.assertEquals(expected, dfs.count());

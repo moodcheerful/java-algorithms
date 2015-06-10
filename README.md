@@ -14,6 +14,7 @@ Repo's tree view:
 │   │   │   │   ├── BreadthFirstSearch.java
 │   │   │   │   ├── DepthFirstSearch.java
 │   │   │   │   ├── DepthFirstSearchNonRecursive.java
+│   │   │   │   ├── DijkstraShortestPath.java
 │   │   │   │   ├── DirectedGraphOrder.java
 │   │   │   │   ├── GreatestCommonDivisor.java
 │   │   │   │   ├── HeapSort.java
@@ -24,7 +25,10 @@ Repo's tree view:
 │   │   │   │   └── TopologicalSort.java
 │   │   │   └── utils
 │   │   │       ├── DirectedGraph.java
-│   │   │       └── Graph.java
+│   │   │       ├── Graph.java
+│   │   │       ├── VertexScore.java
+│   │   │       ├── WeightedDirectedGraph.java
+│   │   │       └── WeightedEdge.java
 │   │   └── resources
 │   │       └── log4j.properties
 │   └── test
@@ -34,6 +38,7 @@ Repo's tree view:
 │               ├── BreadthFirstSearchTest.java
 │               ├── DepthFirstSearchNonRecursiveTest.java
 │               ├── DepthFirstSearchTest.java
+│               ├── DijkstraShortestPathTest.java
 │               ├── DirectedGraphOrderTest.java
 │               ├── GreatestCommonDivisorTest.java
 │               ├── HeapSortTest.java

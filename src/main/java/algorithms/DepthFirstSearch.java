@@ -4,7 +4,7 @@ import utils.Graph;
 
 /**
  *  Depth First Search of the vertices in an undirected graph
- *  that are connected to a given start vertex s.
+ *  that are connected to a given source vertex s.
  *  
  *  Time complexity is O(N + M),
  *  where N is the number of vertices and M is the number of edges.
@@ -16,10 +16,10 @@ public class DepthFirstSearch {
 	// visited[v] = true if there is a path from s to v:
 	private boolean[] visited;
 	
-	// number of vertices connected to the start vertex s:
+	// number of vertices connected to the source vertex s:
 	private int count;
 	
-	// compute the vertices that are connected to the start vertex s:
+	// compute the vertices that are connected to the source vertex s:
 	public DepthFirstSearch(Graph graph, int s) {
 				
 		visited = new boolean[graph.getN()];
@@ -45,14 +45,14 @@ public class DepthFirstSearch {
 	}
 	
 
-    // return true if there is a path from the start vertex s to v:
+    // return true if there is a path from the source vertex s to v:
     public boolean visited(int v) {
     	
         return visited[v];
     }
 
     
-    // return the number of vertices connected to the start vertex s:
+    // return the number of vertices connected to the source vertex s:
     public int count() {
     	
         return count;
@@ -64,7 +64,7 @@ public class DepthFirstSearch {
     	
     	StringBuilder sb = new StringBuilder();
     	String NEWLINE = System.getProperty("line.separator");
-    	sb.append(NEWLINE + "Vertices connected to the start vertex " + s + ": " + NEWLINE);
+    	sb.append(NEWLINE + "Vertices connected to the source vertex " + s + ": " + NEWLINE);
     	
     	for (int v = 0; v < graph.getN(); v++) {
     		
@@ -73,7 +73,7 @@ public class DepthFirstSearch {
     			sb.append(v + " " );
     		}
     	}
-    	sb.append(NEWLINE + "Number of vertices connected to the start vertex " + s + ": " + this.count());
+    	sb.append(NEWLINE + "Number of vertices connected to the source vertex " + s + ": " + this.count());
     	sb.append(NEWLINE + "Total number of vertices in the graph: " + graph.getN());
     	
     	if (this.count() != graph.getN()) {   		

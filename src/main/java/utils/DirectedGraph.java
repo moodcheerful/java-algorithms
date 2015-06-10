@@ -31,19 +31,19 @@ import java.util.ArrayList;
  *    
  *    Corresponding adjacency List (each edge listed only once):
  *      
- *      0: 5 1 6
- *      1: 
- *      2: 0 3 
- *      3: 5 
- *      4: 
- *      5: 4 
- *      6: 9 4
- *      7: 6
- *      8: 7
- *      9: 11 10 12
- *      10: 
- *      11: 12 
- *      12:   
+ *    0: 5 1 6
+ *    1: 
+ *    2: 0 3 
+ *    3: 5 
+ *    4: 
+ *    5: 4 
+ *    6: 9 4
+ *    7: 6
+ *    8: 7
+ *    9: 11 10 12
+ *    10: 
+ *    11: 12 
+ *    12:   
  *  
  *  Topological order:
  *  
