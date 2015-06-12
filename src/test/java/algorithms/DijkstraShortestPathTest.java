@@ -18,7 +18,7 @@ public class DijkstraShortestPathTest {
 	private static final Logger logger = Logger.getLogger(DijkstraShortestPathTest.class);
 	
 	private static int N;
-	private static WeightedDirectedGraph dag;
+	private static WeightedDirectedGraph graph;
 	
 	/*	WeightedDirectedGraph with 8 vertices and 14 edges:
 	 *  
@@ -60,8 +60,8 @@ public class DijkstraShortestPathTest {
 		edgesList.add(Arrays.asList(5, 7, 7));
 		edgesList.add(Arrays.asList(6, 7, 3));
 
-		dag = new WeightedDirectedGraph(N, edgesList);
-		logger.info("graph: " + dag);	
+		graph = new WeightedDirectedGraph(N, edgesList);
+		logger.info("graph: " + graph);	
 	}
 
 	@Test
@@ -71,7 +71,7 @@ public class DijkstraShortestPathTest {
 		int t = 7;
 		int expected = 13;
 		
-		DijkstraShortestPath dijkstra = new DijkstraShortestPath(dag, s);
+		DijkstraShortestPath dijkstra = new DijkstraShortestPath(graph, s);
 		
 		int result = dijkstra.distTo(t);
 				
@@ -84,7 +84,7 @@ public class DijkstraShortestPathTest {
 		int s = 0;
 		int[] expected = new int[]{0, 2, 4, 4, 8, 7, 14, 13};
 		
-		DijkstraShortestPath dijkstra = new DijkstraShortestPath(dag, s);
+		DijkstraShortestPath dijkstra = new DijkstraShortestPath(graph, s);
 		
 		int[] result = dijkstra.distToAll();
 		logger.info("distances from " + s + ": " + Arrays.toString(result));
@@ -99,7 +99,7 @@ public class DijkstraShortestPathTest {
 		int t = 7;
 		Integer[] expected = new Integer[]{0, 1, 2, 4, 7};
 
-		DijkstraShortestPath dijkstra = new DijkstraShortestPath(dag, s);
+		DijkstraShortestPath dijkstra = new DijkstraShortestPath(graph, s);
 
 		Deque<Integer> result = dijkstra.pathTo(t);
 		logger.info("path from " + s + " to " + t + ": " + result);
