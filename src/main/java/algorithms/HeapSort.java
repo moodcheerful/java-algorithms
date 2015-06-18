@@ -82,9 +82,8 @@ public class HeapSort {
 		heap[j - 1] = tmp;
 	}
 
-	// The artificial solution: double the memory use by creating a new
-	// PriorityQueue and
-	// let Java Collections API do its sorting
+	// A trivial solution: double the memory use by creating a new
+	// PriorityQueue and let Java Collections API do its sorting
 	public static <T extends Comparable<T>> void heapSortPriorityQueue(T[] c) {
 
 		Queue<T> queue = new PriorityQueue<T>(Arrays.asList(c));

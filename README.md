@@ -19,6 +19,7 @@ Repo's tree view:
 │   │   │   │   ├── GreatestCommonDivisor.java
 │   │   │   │   ├── HeapSort.java
 │   │   │   │   ├── KnuthShuffle.java
+│   │   │   │   ├── MaintainingMedian.java
 │   │   │   │   ├── MergeSort.java
 │   │   │   │   ├── QuickSort.java
 │   │   │   │   ├── SelectKthSmallest.java
@@ -43,6 +44,7 @@ Repo's tree view:
 │               ├── GreatestCommonDivisorTest.java
 │               ├── HeapSortTest.java
 │               ├── KnuthShuffleTest.java
+│               ├── MaintainingMedianTest.java
 │               ├── MergeSortTest.java
 │               ├── QuickSortTest.java
 │               ├── SelectKthSmallestTest.java
