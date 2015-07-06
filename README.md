@@ -93,6 +93,22 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 
 ---
 
+#### Graph Algorithms:
+
+- Breadth-First Search (BFS):
+	- O(V+E) time complexity using a `queue` (FIFO)
+	- explore nodes in "layers"
+	- compute shortest paths
+	- compute connected components of an undirected graph
+
+- Depth-First Search (DFS):
+	- O(V+E) time complexity using a `stack` (LIFO) (or via recursion)
+	- explore aggressively like a maze, backtrack only when necessary 
+	- compute topological ordering of a directed acyclic graph
+	- compute connected components in directed graphs
+
+
+---
 
 
 
