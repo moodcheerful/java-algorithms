@@ -5,7 +5,7 @@ import java.util.Random;
 public class KnuthShuffle {
 	
 	// Knuth shuffle algorithm (the modern version of Fisher–Yates shuffle algorithm)
-    // Rearranges an array of integers in random order
+	// Rearranges an array of integers in random order
 	// Knuth algorithm's time complexity is O(n)
 	
 	public static void shuffleArray (int[] array) {

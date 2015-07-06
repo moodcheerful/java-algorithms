@@ -1,7 +1,7 @@
 ### Java Algorithms
 ---
 
-Repo's tree view:
+Repo's tree view and algorithms' time complexities:
 
 ```
 ├── README.md
@@ -10,20 +10,20 @@ Repo's tree view:
 │   ├── main
 │   │   ├── java
 │   │   │   ├── algorithms
-│   │   │   │   ├── BinarySearch.java
-│   │   │   │   ├── BreadthFirstSearch.java
-│   │   │   │   ├── DepthFirstSearch.java
-│   │   │   │   ├── DepthFirstSearchNonRecursive.java
-│   │   │   │   ├── DijkstraShortestPath.java
-│   │   │   │   ├── DirectedGraphOrder.java
-│   │   │   │   ├── GreatestCommonDivisor.java
-│   │   │   │   ├── HeapSort.java
-│   │   │   │   ├── KnuthShuffle.java
-│   │   │   │   ├── MaintainingMedian.java
-│   │   │   │   ├── MergeSort.java
-│   │   │   │   ├── QuickSort.java
-│   │   │   │   ├── SelectKthSmallest.java
-│   │   │   │   └── TopologicalSort.java
+│   │   │   │   ├── BinarySearch.java	----------------- O(log n)
+│   │   │   │   ├── BreadthFirstSearch.java ------------ O(V + E)
+│   │   │   │   ├── DepthFirstSearch.java -------------- O(V + E)
+│   │   │   │   ├── DepthFirstSearchNonRecursive.java -- O(V + E)
+│   │   │   │   ├── DijkstraShortestPath.java ---------- O(E log V)
+│   │   │   │   ├── DirectedGraphOrder.java ------------ O(V + E)
+│   │   │   │   ├── GreatestCommonDivisor.java --------- O((log min(a, b))^2)
+│   │   │   │   ├── HeapSort.java ---------------------- O(n log n)
+│   │   │   │   ├── KnuthShuffle.java ------------------ O(n)
+│   │   │   │   ├── MaintainingMedian.java ------------- O(log i)
+│   │   │   │   ├── MergeSort.java --------------------- O(n log n)
+│   │   │   │   ├── QuickSort.java --------------------- O(n log n)
+│   │   │   │   ├── SelectKthSmallest.java ------------- O(n)
+│   │   │   │   └── TopologicalSort.java --------------- O(V + E)
 │   │   │   └── utils
 │   │   │       ├── DirectedGraph.java
 │   │   │       ├── Graph.java
