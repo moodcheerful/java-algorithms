@@ -10,7 +10,7 @@ Repo's tree view and algorithms' time complexities:
 │   ├── main
 │   │   ├── java
 │   │   │   ├── algorithms
-│   │   │   │   ├── BinarySearch.java	----------------- O(log n)
+│   │   │   │   ├── BinarySearch.java ------------------ O(log n)
 │   │   │   │   ├── BreadthFirstSearch.java ------------ O(V + E)
 │   │   │   │   ├── DepthFirstSearch.java -------------- O(V + E)
 │   │   │   │   ├── DepthFirstSearchNonRecursive.java -- O(V + E)
