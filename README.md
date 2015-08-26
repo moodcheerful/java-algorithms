@@ -95,20 +95,39 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 
 #### Graph Algorithms:
 
-- Breadth-First Search (BFS):
-	- O(V+E) time complexity using a `queue` (FIFO)
+- __Breadth-First Search (BFS)__:
+	- __O(V+E)__ time complexity using a `queue` (FIFO)
 	- explore nodes in "layers"
 	- compute shortest paths
 	- compute connected components of an undirected graph
 
-- Depth-First Search (DFS):
-	- O(V+E) time complexity using a `stack` (LIFO) (or via recursion)
+- __Depth-First Search (DFS)__:
+	- __O(V+E)__ time complexity using a `stack` (LIFO) (or via recursion)
 	- explore aggressively like a maze, backtrack only when necessary 
 	- compute topological ordering of a directed acyclic graph
 	- compute connected components in directed graphs
 
+- __Depth-First Orders__ in a directed acyclical graph (__DAG__): 
+	- __Preorder__: root, left, right (put the vertex on a queue before the recursive calls)
+	- __Postorder__: left, right, root (put the vertex on a queue after the recursive calls)
+	- __Reverse postorder__: right, left, root (put the vertex on a stack after the recursive calls = __topological search__)
+	- Inorder: left, root, right
+	- Reverse preorder: root, right, left
+	- Reverse inorder: right, root, left
 
----
+- __Topological Sort__: 
+
+	- Given a directed graph, put the vertices in order such that all its directed edges point from a vertex earlier in the order to a vertex later in the order. 
+	- A directed graph has a topological order if and only if it is a directed acyclical graph (DAG).
+	- DFS __reverse postorder__ in a DAG is a topological sort.
+	- With DFS, topological sort time complexity is __O(V+E)__.
+
+- __Dijkstra's Shortest Path algorithm__:
+
+	- computes the shortest path in an edge-weighted directed graph with non-negative weights
+	- time complexity: __O(E log V)__
+	- space complexity: __O(V)__
+
 
 
 
