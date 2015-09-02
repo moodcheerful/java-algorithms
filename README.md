@@ -133,10 +133,30 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 - __Dijkstra's Shortest Path algorithm__:
 
 	- computes the shortest path in an __edge-weighted__ directed graph with non-negative weights
-	- time complexity: __O(E log V)__ (using Heap data structure)
+	- canonical use of __Heap__ data structure: fast way to do repeated minimum computations
+	- time complexity: __O(E log V)__ 
 	- space complexity: __O(V)__
 
+---
 
+#### Heap (Priority Queue): 
+
+- Canonical use of Heap: fast way to do repeated minimum computations - perform Insert, Extract-Min in O(log n) time
+- Supported Operations:
+	- Insert: O(log n)
+	- Extract-Min: O(log n) - remove an object with a minimum key value, ties broken arbitrarily
+	- Peek: O(1)  
+	also : 
+	- Heapify: O(n) - batch insert n elements
+	- Delete: O(log n)
+- Conceptually: a perfectly balanced binary tree of height = log n
+- __Heap Property__: at every node, key <= children’s keys 
+- Implementation: array (index starts at 1)
+	- children of i = 2i, 2i+1
+	- parent of i = [i/2] 
+	- Extract-Min: swapping up last leaf and then bubbling down 
+	- Insert: bubbling up from the last leaf
+- Applications: sorting, Dijkstra's Shortest Path algorithm, event manager, median maintenence
 
 
 
