@@ -123,18 +123,18 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 	- With DFS, topological sort time complexity is __O(V+E)__.
 	- Application: sequence tasks while respectng all precedence constraints.
 
-- __Dijkstra's Shortest Path algorithm__:
-
-	- computes the shortest path in an edge-weighted directed graph with non-negative weights
-	- time complexity: __O(E log V)__
-	- space complexity: __O(V)__
-
 - __Strongly Connected Components__:
 
 	- strongly connected components (SCCs) of a directed graph G are the equivalence classes of the relation:   
 	u<->v <==> there exists a path u->v and a path v->u in G
 	- __Kosaraju’s Two-Pass Algorithm__ computes SCCs in 2*DFS = __O(V+E)__ time.
 
+
+- __Dijkstra's Shortest Path algorithm__:
+
+	- computes the shortest path in an __edge-weighted__ directed graph with non-negative weights
+	- time complexity: __O(E log V)__ (using Heap data structure)
+	- space complexity: __O(V)__
 
 
 
