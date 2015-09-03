@@ -62,9 +62,9 @@ constant | 1 | statement | add 2 numbers; hash table access
 logarithmic | log n | divide in half | binary search
 linear | n | loop | find the maximum
 linearithmic | n log n | divide and conquer | mergesort
-quadratic | n^2 | double loop | check all pairs; bubble sort
-cubic | n^3 | triple loop | check all triples
-exponential | 2^n | exhaustive search | check all subsets
+quadratic | n<sup>2</sup> | double loop | check all pairs; bubble sort
+cubic | n<sup>3</sup> | triple loop | check all triples
+exponential | 2<sup>n</sup> | exhaustive search | check all subsets
 factorial | n! | brute-force | travelling salesman problem solved by brute force
 
 ---
@@ -81,13 +81,13 @@ factorial | n! | brute-force | travelling salesman problem solved by brute force
 
 Algorithm | Time Complexity | Space Complexity | Stable | Method
 :--- |:---:|:---:|:---:|:---:
-Quicksort | O(n log(n))	| log(n) | No | Partitioning
+Quicksort | O(n log(n))	| log n | No | Partitioning
 Mergesort | O(n log(n)) | n | Yes | Merging
 Heapsort | O(n log(n)) | 1 | No | Selection
-Insertion Sort | O(n^2) | 1 | Yes | Insertion
-Selection Sort | O(n^2) | 1 | No | Selection
-Bubble Sort	| O(n^2) | 1 | Yes | Exchanging
-Shell Sort | O(n (log(n))^2) | 1 | No | Insertion
+Insertion Sort | O(n<sup>2</sup>) | 1 | Yes | Insertion
+Selection Sort | O(n<sup>2</sup>) | 1 | No | Selection
+Bubble Sort	| O(n<sup>2</sup>) | 1 | Yes | Exchanging
+Shell Sort | O(n (log n)<sup>2</sup>) | 1 | No | Insertion
 Bucket Sort	| O(n+k) | O(n) | Yes | (Non-comparison sort)
 Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 
@@ -158,7 +158,27 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 	- Insert: bubbling up from the last leaf
 - Applications: sorting, Dijkstra's Shortest Path algorithm, event manager, median maintenence
 
+---
 
+#### Balanced Binary Search Tree:
+
+- Raison d’etre: like sorted array + fast (logarithmic) inserts and deletes 
+- __Search Tree Property__: each node's key > all keys in the node's left subtree, and < all keys in the node's right subtree
+- Binary: each node has at most 2 children
+- The height of a BST:
+	log<sub>2</sub>(n) (best case, balanced) <= height <= n (worst case, a chain)
+- Insert a new key k into a tree:
+	- search for k (unsuccessfully)
+	- rewire final NULL pointer to point to new node with key k
+- Search and Insert worst-case running time: Θ(height)
+- Delete a key k:
+	1. easy case: k’s node has no children
+	2. medium case: k’s node has 1 child
+	3. difficult case: k’s node has 2 children
+- __Balanced Search Tree__:
+	- Idea: ensure that height is always best possible: O(log n)
+	- then Search / Insert / Delete / Min / Max / Predecessor / Successor will run in __O(log n)__ time
+	- Example: red-black trees, AUL trees, splay trees, B trees 
 
 
 
