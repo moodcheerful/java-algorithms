@@ -179,7 +179,14 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 	- Idea: ensure that height is always best possible: O(log n)
 	- then Search / Insert / Delete / Min / Max / Predecessor / Successor will run in __O(log n)__ time
 	- Example: red-black trees, AUL trees, splay trees, B trees 
-
+- __Red-Black Tree__:
+	- Red-Black Tree Invariants:
+		1. Each node red or black
+		2. Root is black
+		3. No 2 reds in a row (red node => only black children)
+		4. Every root-null path (like in an unsuccessful search) has same number of black nodes
+	- Height Guarantee: every red-black tree with n nodes has a height of O(log n).
+	- Search, Insert, Delete in a red-black tree run in __O(log n)__ time.
 
 
 
