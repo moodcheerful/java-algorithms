@@ -186,7 +186,23 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 		3. No 2 reds in a row (red node => only black children)
 		4. Every root-null path (like in an unsuccessful search) has same number of black nodes
 	- Height Guarantee: every red-black tree with n nodes has a height of O(log n).
-	- Search, Insert, Delete in a red-black tree run in __O(log n)__ time.
+	- Time complexity of Search, Insert, Delete in a red-black tree: __O(log n)__.  
+
+Operations / Running Times | Balanced Search Tree | Sorted Array
+:--- | :--- | :--- 
+Search | Θ(log n) | Θ(log n)
+Select (given order statistic i) | O(log n) | O(1) | yes | 
+Min/Max | O(log n) | O(1) 
+Predecessor/Successor (given pointer to a key) | O(log n) | O(1) 
+Rank (# of keys <= a given value) | O(log n) | O(log n) 
+Output in Sorted Order | O(n) | O(n) 
+Insert | O(log n) | - (would take Θ(n) time) 
+Delete | O(log n) | - (would take Θ(n) time) 
+
+Also supported by heaps: Select, Insert, Delete  
+Also supported by hash tables: Search, Insert, Delete
+
+---
 
 
 
