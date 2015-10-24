@@ -4,17 +4,29 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * An undirected graph of vertices named 0 through N - 1. Parallel edges and self-loops are NOT
- * allowed.
- * 
- * The implementation uses an adjacency list (an arraylist of sets). Example:
- * 
- * 0: 1 2 5 1: 0 2 2: 0 1 3 4 3: 2 4 5 4: 2 3 5: 0 3 6: 7 7: 6
- * 
- * 0 / | \ | 1 ─ 2 | | \ 5 ──── 3 ─ 4
- * 
- * 6 ─ 7
- * 
+ *  An undirected graph of vertices named 0 through N - 1. 
+ *  Parallel edges and self-loops are NOT allowed.
+ *  
+ *  The implementation uses an adjacency list (an arraylist of sets).
+ *  Example:
+ *  
+ *  0: 1 2 5 
+ *  1: 0 2 
+ *  2: 0 1 3 4 
+ *  3: 2 4 5 
+ *  4: 2 3 
+ *  5: 0 3 
+ *  6: 7
+ *  7: 6
+ *  
+ *     0 
+ *   / | \ 
+ *  |  1 ─ 2
+ *  |      | \
+ *  5 ──── 3 ─ 4
+ *  	
+ *  6 ─ 7
+ *  
  */
 public class Graph {
 
