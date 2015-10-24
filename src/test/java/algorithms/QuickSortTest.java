@@ -33,12 +33,12 @@ public class QuickSortTest {
 	@Test
 	public final void testQuickSort() {
 
-			String[] sortedArray = Arrays.copyOf(shuffledArray, shuffledArray.length);
+		String[] sortedArray = Arrays.copyOf(shuffledArray, shuffledArray.length);
 
-			QuickSort.quickSort(sortedArray);
-			
-			logger.info("Sorted array: " + Arrays.toString(sortedArray));
+		QuickSort.quickSort(sortedArray);
 
-			assertArrayEquals("quickSort works", expectedArray, sortedArray);
+		logger.info("Sorted array: " + Arrays.toString(sortedArray));
+
+		assertArrayEquals("quickSort works", expectedArray, sortedArray);
 	}
 }
