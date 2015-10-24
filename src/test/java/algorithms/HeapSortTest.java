@@ -19,13 +19,13 @@ public class HeapSortTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() {
-		
-		expectedArray = new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" };
-		
+
+		expectedArray = new String[] {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"};
+
 		shuffledArray = Arrays.copyOf(expectedArray, expectedArray.length);
 
 		Collections.shuffle(Arrays.asList(shuffledArray));
-		
+
 		logger.info("Expected array: " + Arrays.toString(expectedArray));
 		logger.info("Shuffled array: " + Arrays.toString(shuffledArray));
 	}
@@ -33,12 +33,12 @@ public class HeapSortTest {
 	@Test
 	public final void testHeapSort() {
 
-			String[] sortedArray = Arrays.copyOf(shuffledArray, shuffledArray.length);
+		String[] sortedArray = Arrays.copyOf(shuffledArray, shuffledArray.length);
 
-			HeapSort.heapSort(sortedArray);
-			
-			logger.info("Sorted array: " + Arrays.toString(sortedArray));
+		HeapSort.heapSort(sortedArray);
 
-			assertArrayEquals("heapSort works", expectedArray, sortedArray);
+		logger.info("Sorted array: " + Arrays.toString(sortedArray));
+
+		assertArrayEquals("heapSort works", expectedArray, sortedArray);
 	}
 }

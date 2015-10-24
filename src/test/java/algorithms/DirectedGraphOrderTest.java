@@ -105,7 +105,7 @@ public class DirectedGraphOrderTest {
 
 		DirectedGraphOrder dfs = new DirectedGraphOrder(dag);
 
-		Integer[] expectedPreorder = new Integer[] { 0, 5, 4, 1, 6, 9, 11, 12, 10, 2, 3, 7, 8 };
+		Integer[] expectedPreorder = new Integer[] {0, 5, 4, 1, 6, 9, 11, 12, 10, 2, 3, 7, 8};
 
 		Queue<Integer> result = dfs.preorder();
 		logger.info("preorder: " + result);
@@ -118,7 +118,7 @@ public class DirectedGraphOrderTest {
 
 		DirectedGraphOrder dfs = new DirectedGraphOrder(dag);
 
-		Integer[] expectedPostorder = new Integer[] { 4, 5, 1, 12, 11, 10, 9, 6, 0, 3, 2, 7, 8 };
+		Integer[] expectedPostorder = new Integer[] {4, 5, 1, 12, 11, 10, 9, 6, 0, 3, 2, 7, 8};
 
 		Queue<Integer> result = dfs.postorder();
 		logger.info("postorder: " + result);
@@ -131,8 +131,7 @@ public class DirectedGraphOrderTest {
 
 		DirectedGraphOrder dfs = new DirectedGraphOrder(dag);
 
-		Integer[] expectedReversePostorder = new Integer[] { 8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5,
-				4 };
+		Integer[] expectedReversePostorder = new Integer[] {8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4};
 
 		Deque<Integer> result = dfs.reversePostorder();
 		logger.info("reversePostorder: " + result);
