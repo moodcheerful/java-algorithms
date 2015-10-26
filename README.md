@@ -108,12 +108,17 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 	- compute connected components in directed graphs
 
 - __Depth-First Orders__ in a directed acyclical graph (__DAG__): 
-	- __Preorder__: root, left, right (put the vertex on a queue before the recursive calls)
-	- __Postorder__: left, right, root (put the vertex on a queue after the recursive calls)
-	- __Reverse postorder__: right, left, root (put the vertex on a stack after the recursive calls = __topological search__)
+	- Preorder: root, left, right (put the vertex on a queue before the recursive calls)
+	- Postorder: left, right, root (put the vertex on a queue after the recursive calls)
+	- Reverse postorder: right, left, root
 	- Inorder: left, root, right
 	- Reverse preorder: root, right, left
 	- Reverse inorder: right, root, left
+	- Applications:
+		- Preorder: copying a binary tree; prefix expression (Polish notation)
+		- Inorder: returning values in order, according to the comparator of a binary search tree
+		- Postorder: deleting nodes or an entire binary tree; postfix representation
+		- __Reverse postorder__: __topological sort__
 
 - __Topological Sort__: 
 
