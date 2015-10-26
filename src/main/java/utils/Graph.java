@@ -29,47 +29,47 @@ import java.util.Set;
  *  
  */
 public class Graph {
-	
-    private int N;
-    private List<Set<Integer>> adjacencyList;
-    
-    // construct a graph from the adjacency list:
+
+	private int N;
+	private List<Set<Integer>> adjacencyList;
+
+	// construct a graph from the adjacency list:
 	public Graph(List<Set<Integer>> adjacencyList) {
-		
-        this.N = adjacencyList.size();
+
+		this.N = adjacencyList.size();
 		this.adjacencyList = adjacencyList;
-    }
+	}
 
-    // return the number of vertices in the graph:
-    public int getN() {
-        return N;
-    }
+	// return the number of vertices in the graph:
+	public int getN() {
+		return N;
+	}
 
-    // return the vertices adjacent to vertex v:
-    public Set<Integer> adjacentVertices(int v) {
+	// return the vertices adjacent to vertex v:
+	public Set<Integer> adjacentVertices(int v) {
 
-        if (v < 0 || v >= N) {
-            throw new IndexOutOfBoundsException("vertex " + v + " is not between 0 and " + (N-1));
-        }
-        return adjacencyList.get(v);
-    }
-    
-    // return a string representation of the graph in O(N + M) time,
-    // where N is the number of vertices and M is the number of edges:
-    @Override
-    public String toString() {
-    	
-        StringBuilder sb = new StringBuilder();
-        String NEWLINE = System.getProperty("line.separator");
-        sb.append(NEWLINE);
-        
-        for (int v = 0; v < N; v++) {
-            sb.append(v + ": ");
-            for (int w : adjacencyList.get(v)) {
-                sb.append(w + " ");
-            }
-            sb.append(NEWLINE);
-        }
-        return sb.toString();
-    }
+		if (v < 0 || v >= N) {
+			throw new IndexOutOfBoundsException("vertex " + v + " is not between 0 and " + (N - 1));
+		}
+		return adjacencyList.get(v);
+	}
+
+	// return a string representation of the graph in O(N + M) time,
+	// where N is the number of vertices and M is the number of edges:
+	@Override
+	public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		String NEWLINE = System.getProperty("line.separator");
+		sb.append(NEWLINE);
+
+		for (int v = 0; v < N; v++) {
+			sb.append(v + ": ");
+			for (int w : adjacencyList.get(v)) {
+				sb.append(w + " ");
+			}
+			sb.append(NEWLINE);
+		}
+		return sb.toString();
+	}
 }

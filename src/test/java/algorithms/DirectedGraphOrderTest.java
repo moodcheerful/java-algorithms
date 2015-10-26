@@ -102,40 +102,40 @@ public class DirectedGraphOrderTest {
 
 	@Test
 	public void testPreorder() {
-		
-		DirectedGraphOrder dfs = new DirectedGraphOrder(dag);
-        
-        Integer[] expectedPreorder = new Integer[]{0, 5, 4, 1, 6, 9, 11, 12, 10, 2, 3, 7, 8};
-       
-        Queue<Integer> result = dfs.preorder();
-        logger.info("preorder: " + result);		
 
-		Assert.assertArrayEquals(expectedPreorder, result.toArray());	
+		DirectedGraphOrder dfs = new DirectedGraphOrder(dag);
+
+		Integer[] expectedPreorder = new Integer[] {0, 5, 4, 1, 6, 9, 11, 12, 10, 2, 3, 7, 8};
+
+		Queue<Integer> result = dfs.preorder();
+		logger.info("preorder: " + result);
+
+		Assert.assertArrayEquals(expectedPreorder, result.toArray());
 	}
 
 	@Test
 	public void testPostorder() {
-		
+
 		DirectedGraphOrder dfs = new DirectedGraphOrder(dag);
-        
-        Integer[] expectedPostorder = new Integer[]{4, 5, 1, 12, 11, 10, 9, 6, 0, 3, 2, 7, 8};
-        
-        Queue<Integer> result = dfs.postorder();
-        logger.info("postorder: " + result);		
-        		
-		Assert.assertArrayEquals(expectedPostorder, result.toArray());	
+
+		Integer[] expectedPostorder = new Integer[] {4, 5, 1, 12, 11, 10, 9, 6, 0, 3, 2, 7, 8};
+
+		Queue<Integer> result = dfs.postorder();
+		logger.info("postorder: " + result);
+
+		Assert.assertArrayEquals(expectedPostorder, result.toArray());
 	}
-	
+
 	@Test
 	public void testReversePostorder() {
-		
+
 		DirectedGraphOrder dfs = new DirectedGraphOrder(dag);
-        
-        Integer[] expectedReversePostorder = new Integer[]{8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4};
-        
-        Deque<Integer> result = dfs.reversePostorder();
-        logger.info("reversePostorder: " + result);		
-        
-		Assert.assertArrayEquals(expectedReversePostorder, result.toArray());	
+
+		Integer[] expectedReversePostorder = new Integer[] {8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4};
+
+		Deque<Integer> result = dfs.reversePostorder();
+		logger.info("reversePostorder: " + result);
+
+		Assert.assertArrayEquals(expectedReversePostorder, result.toArray());
 	}
 }

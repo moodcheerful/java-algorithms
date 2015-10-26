@@ -90,25 +90,25 @@ public class TopologicalSortTest {
 		edgesList.add(Arrays.asList(6, 9));
 		edgesList.add(Arrays.asList(6, 4));
 		edgesList.add(Arrays.asList(7, 6));
-		
+
 		N = 13;
 
 		dag = new DirectedGraph(N, edgesList);
-		
-		logger.info("edgesList: " + edgesList);	
-		logger.info("graph: " + dag);	
+
+		logger.info("edgesList: " + edgesList);
+		logger.info("graph: " + dag);
 	}
-	
+
 	@Test
 	public void testTopologicalSort() {
-		
+
 		TopologicalSort ts = new TopologicalSort(dag);
-        
-        Integer[] expectedOrder = new Integer[]{8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4};
-        
-        Deque<Integer> result = ts.order();
-        logger.info("Topological order: " + result);		
-        
-		Assert.assertArrayEquals(expectedOrder, result.toArray());	
+
+		Integer[] expectedOrder = new Integer[] { 8, 7, 2, 3, 0, 6, 9, 10, 11, 12, 1, 5, 4 };
+
+		Deque<Integer> result = ts.order();
+		logger.info("Topological order: " + result);
+
+		Assert.assertArrayEquals(expectedOrder, result.toArray());
 	}
 }

@@ -58,29 +58,29 @@ import java.util.ArrayList;
  */
 
 public class DirectedGraph {
-	
-    private int N;
-    private List<List<Integer>> adjacencyList;
-      
-    // construct a directed graph of N vertices from the list of edges:
+
+	private int N;
+	private List<List<Integer>> adjacencyList;
+
+	// construct a directed graph of N vertices from the list of edges:
 	public DirectedGraph(int N, List<List<Integer>> edgesList) {
-		
+
 		this.N = N;
-		
+
 		// initialize a new adjacency list of size N:
-		this.adjacencyList = new ArrayList<List<Integer>>(N);		
+		this.adjacencyList = new ArrayList<List<Integer>>(N);
 		for (int v = 0; v < N; v++) {
 			this.adjacencyList.add(new ArrayList<Integer>());
 		}
-		
+
 		// add each edge from edgesList to the adjacency list only once:
 		for (List<Integer> pair : edgesList) {
 			int v = pair.get(0);
 			int w = pair.get(1);
 			addEdge(v, w);
-		}	
-    }
-    
+		}
+	}
+
 	// throw an IndexOutOfBoundsException unless 0 <= v < N
 	private void validateVertex(int v) {
 		if (v < 0 || v >= N) {
@@ -94,39 +94,39 @@ public class DirectedGraph {
 		validateVertex(w);
 		adjacencyList.get(v).add(w);
 	}
-	
-    // return the number of vertices in the directed graph:
-    public int getN() {
-        return N;
-    }
-	
+
+	// return the number of vertices in the directed graph:
+	public int getN() {
+		return N;
+	}
+
 	// return the vertices adjacent from vertex v in the directed graph:
-    public List<Integer> adjacentVertices(int v) {
-		validateVertex(v);		
-        return adjacencyList.get(v);
-    }
-	
+	public List<Integer> adjacentVertices(int v) {
+		validateVertex(v);
+		return adjacencyList.get(v);
+	}
+
 	// return the number of directed edges from vertex v:
 	public int outdegree(int v) {
-		validateVertex(v);		
-        return adjacencyList.get(v).size();
+		validateVertex(v);
+		return adjacencyList.get(v).size();
 	}
-	
-    // return a string representation of the directed graph in O(N + M) time:
-    @Override
-    public String toString() {
-    	
-        StringBuilder sb = new StringBuilder();
-        String NEWLINE = System.getProperty("line.separator");
-        sb.append(NEWLINE);
-        
-        for (int v = 0; v < N; v++) {
-            sb.append(v + ": ");
-            for (int w : adjacencyList.get(v)) {
-                sb.append(w + " ");
-            }
-            sb.append(NEWLINE);
-        }
-        return sb.toString();
-    }
+
+	// return a string representation of the directed graph in O(N + M) time:
+	@Override
+	public String toString() {
+
+		StringBuilder sb = new StringBuilder();
+		String NEWLINE = System.getProperty("line.separator");
+		sb.append(NEWLINE);
+
+		for (int v = 0; v < N; v++) {
+			sb.append(v + ": ");
+			for (int w : adjacencyList.get(v)) {
+				sb.append(w + " ");
+			}
+			sb.append(NEWLINE);
+		}
+		return sb.toString();
+	}
 }

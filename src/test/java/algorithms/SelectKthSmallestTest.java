@@ -26,41 +26,41 @@ public class SelectKthSmallestTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() {
-		
+
 		originalArray = new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K" };
 		logger.info("Original array: " + Arrays.toString(originalArray));
-		
-		Random random = new Random();		
+
+		Random random = new Random();
 		randomIndex = random.nextInt(originalArray.length);
 		expectedElement = originalArray[randomIndex];
 		logger.info(randomIndex + "-th smallest element to select: " + expectedElement);
-		
+
 		shuffledArray = Arrays.copyOf(originalArray, originalArray.length);
-		Collections.shuffle(Arrays.asList(shuffledArray));		
+		Collections.shuffle(Arrays.asList(shuffledArray));
 		logger.info("Shuffled array: " + Arrays.toString(shuffledArray));
 	}
 
 	@Test
 	public final void testSelectKthSmallest() {
-			
-			String result = SelectKthSmallest.quickSelect(shuffledArray, randomIndex);
-			logger.info("Selected element: " + result);
-			
-			Assert.assertEquals("SelectKthSmallest works", expectedElement, result);			
+
+		String result = SelectKthSmallest.quickSelect(shuffledArray, randomIndex);
+		logger.info("Selected element: " + result);
+
+		Assert.assertEquals("SelectKthSmallest works", expectedElement, result);
 	}
-	
+
 	@Test
 	// Slow sort (O(n^2)) using quickSelect algorithm n times:
 	public final void testSort() {
-		
+
 		String[] sortedArray = new String[shuffledArray.length];
-		
+
 		for (int i = 0; i < shuffledArray.length; i++) {
-			
+
 			sortedArray[i] = SelectKthSmallest.quickSelect(shuffledArray, i);
 		}
 		logger.info("Sorted array: " + Arrays.toString(sortedArray));
-	
+
 		Assert.assertArrayEquals(originalArray, sortedArray);
 	}
 }
