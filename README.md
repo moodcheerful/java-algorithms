@@ -117,7 +117,7 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 	- Applications:
 		- Preorder: copying a binary tree; prefix expression (Polish notation)
 		- Inorder: returning values in order, according to the comparator of a binary search tree
-		- Postorder: deleting nodes or an entire binary tree; postfix representation
+		- Postorder: deleting nodes or an entire binary tree; postfix representation (reverse Polish notation)
 		- __Reverse postorder__: __topological sort__
 
 - __Topological Sort__: 
