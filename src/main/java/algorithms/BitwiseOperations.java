@@ -47,7 +47,7 @@ public class BitwiseOperations {
 	// (least significant bit):
 	public static int clearBitsItoLSB(int number, int i) {
 
-		// mask 1...10...0 with 1s from position i inclusive to 0:
+		// mask 1...10...0 with 0s from position i inclusive to 0:
 		int mask = ~(-1 >>> (31 - i));
 		return number & mask;
 	}
