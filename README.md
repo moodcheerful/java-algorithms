@@ -13,6 +13,7 @@ Repo's tree view and algorithms' time complexities:
 │   │   │   │   ├── BinarySearch.java ------------------ O(log n)
 │   │   │   │   ├── BitwiseOperations.java ------------- O(1)
 │   │   │   │   ├── BreadthFirstSearch.java ------------ O(V + E)
+│   │   │   │   ├── DecimalToBinary.java --------------- O(1)
 │   │   │   │   ├── DepthFirstSearch.java -------------- O(V + E)
 │   │   │   │   ├── DepthFirstSearchNonRecursive.java -- O(V + E)
 │   │   │   │   ├── DijkstraShortestPath.java ---------- O(E log V)
@@ -39,6 +40,7 @@ Repo's tree view and algorithms' time complexities:
 │               ├── BinarySearchTest.java
 │               ├── BitwiseOperationsTest.java
 │               ├── BreadthFirstSearchTest.java
+│               ├── DecimalToBinaryTest.java
 │               ├── DepthFirstSearchNonRecursiveTest.java
 │               ├── DepthFirstSearchTest.java
 │               ├── DijkstraShortestPathTest.java
