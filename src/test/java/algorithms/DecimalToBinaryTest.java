@@ -47,4 +47,20 @@ public class DecimalToBinaryTest {
 			Assert.assertEquals(expected, result);
 		}
 	}
+
+	@Test
+	public void testBinaryToDecimal_v2() {
+
+		for (int i = 0; i < decimals.length; i++) {
+
+			int expected = decimals[i];
+
+			int result = DecimalToBinary.binaryToDecimal_v2(Integer.toBinaryString(expected));
+
+			logger.info("binary: " + Integer.toBinaryString(expected)
+					+ ", decimal: " + result);
+
+			Assert.assertEquals(expected, result);
+		}
+	}
 }

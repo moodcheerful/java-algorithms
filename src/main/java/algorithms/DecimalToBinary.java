@@ -50,10 +50,28 @@ public class DecimalToBinary {
 
 		for (int i = 0; i < n; i++) {
 
+			// read binary string from right to left:
 			if (binary.charAt(n - i - 1) == '1') {
 
 				decimal = decimal | (1 << i);
 			}
+		}
+		return decimal;
+	}
+
+	/*
+	 * Algorithm for converting binary to decimal integers (both positive and negative).
+	 * The "reverse" of the divide by 2 algorithm. Constant time complexity.
+	 */ 
+	public static int binaryToDecimal_v2(String binary) {
+
+		int decimal = 0;
+		int n = binary.length(); // n <= 32
+
+		for (int i = 0; i < n; i++) {
+
+			// read binary string from left to right:
+			decimal = (decimal << 1) + (binary.charAt(i) == '1' ? 1 : 0);
 		}
 		return decimal;
 	}
