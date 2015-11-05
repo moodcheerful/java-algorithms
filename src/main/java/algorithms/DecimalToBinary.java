@@ -6,9 +6,14 @@ public class DecimalToBinary {
 	 * The Divide by 2 algorithm for converting integers (both positive and negative) 
 	 * from decimal to binary. Constant time complexity.
 	 * 
-	 * For decimal n represented as abcd in base 2:
-	 * n = a*2^3 + b*2^2 + c*2^1 + d*2^0 = 2*(a*2^2 + b*2^1 + c*2^0) + d = 
-	 * = 2 * floor(n / 2) + (n % 2)
+	 * For a decimal number n, represented in base 2 as abcd:
+	 * n = a * 2^3 + b * 2^2 + c * 2^1 + d * 2^0 = 
+	 * = 2 * (a * 2^2 + b * 2^1 + c * 2^0) + d = 
+	 * = 2 * (n >> 1) + (n & 1) =
+	 * = 2 * (n / 2) + (n % 2), if n >= 0
+	 * 
+	 * Example for n < 0: n = -3 = 2 * (-2) + 1 = 2 * (-3 >> 1) + (-3 & 1),
+	 * since -3 % 2 = -1, -3 & 1 = 1, -3 / 2 = -1, -3 >> 1 = -2
 	 * 
 	 */
 	public static String decimalToBinary(int decimal) {
@@ -18,9 +23,9 @@ public class DecimalToBinary {
 
 		for (int i = 0; i < 32; i++) {
 
-			lsb = decimal & 1; // decimal % 2
+			lsb = decimal & 1; // decimal % 2, if n >= 0
 			binary = lsb + binary;
-			decimal = decimal >> 1; // floor(decimal / 2)
+			decimal = decimal >> 1; // decimal / 2, if n >= 0
 
 			// positive decimals will break out of the for loop
 			// before 32 iterations
