@@ -4,7 +4,11 @@ public class DecimalToBinary {
 
 	/*
 	 * The Divide by 2 algorithm for converting integers (both positive and negative) 
-	 * from decimal to binary. Constant time complexity.
+	 * from decimal to binary. 
+	 * 
+	 * Constant time complexity since n is bounded by Integer.MAX_VALUE = 2^31 - 1.
+	 * If n was a arbitrary precision unbounded integer, complexity would be O(M(n) * log(n)),
+	 * where M(n) is complexity of multiplication.
 	 * 
 	 * For a decimal number n, represented in base 2 as abcd:
 	 * n = a * 2^3 + b * 2^2 + c * 2^1 + d * 2^0 = 
