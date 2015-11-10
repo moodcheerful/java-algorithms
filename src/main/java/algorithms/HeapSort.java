@@ -5,22 +5,22 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class HeapSort {
-
-	// HeapSort algorithm
-	// Time complexity is O(n*log(n))
-	//
-	// Step 1. Heap construction (linear time).
-	// The largest element of the heap is stored at index 1.
-	// Proceed from right to left, using sink() to make subheaps as we go.
-	//
-	// Step 2. Sortdown.
-	// A sorted array is built from right to left by repeatedly removing the
-	// largest remaining element
-	// (the root of the heap, stored at index 1), and inserting it into position
-	// vacated as the heap shrinks.
-	// Then the remaining heap is updated after each removal to maintain the
-	// heap property.
-
+	
+	/*
+	 * HeapSort algorithm.
+	 * 
+	 * Time complexity is O(n*log(n))
+	 * 
+	 * Step 1. Heap construction (linear time). 
+	 * The largest element of the heap is stored at index 1. 
+	 * Proceed from right to left, using sink() to make subheaps as we go.
+	 * 
+	 * Step 2. Sortdown. 
+	 * A sorted array is built from right to left by repeatedly removing the largest 
+	 * remaining element (the root of the heap, stored at index 1), 
+	 * and inserting it into position vacated as the heap shrinks. 
+	 * Then the remaining heap is updated after each removal to maintain the heap property.
+	 */
 	public static <T extends Comparable<T>> void heapSort(T[] heap) {
 
 		int N = heap.length;
