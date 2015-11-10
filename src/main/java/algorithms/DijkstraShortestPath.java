@@ -2,6 +2,7 @@ package algorithms;
 
 import java.util.Comparator;
 import java.util.Queue;
+
 import java.util.PriorityQueue;
 import java.util.Deque;
 import java.util.ArrayDeque;
@@ -77,7 +78,14 @@ public class DijkstraShortestPath {
 		pq = new PriorityQueue<VertexScore>(N, new Comparator<VertexScore>() {
 
 			public int compare(VertexScore x, VertexScore y) {
-				return x.getScore() - y.getScore();
+
+				// return below only works since vertex score values are from [0, Integer.MAX_VALUE]:
+				// return x.getScore() - y.getScore();
+			
+				// best practice: impose total ordering, i.e. ordering that is compatible with equals:
+				// (a.compareTo(b) == 0) => a.equals(b)				
+				return (x.getScore() < y.getScore() ? -1 : (x.getScore() > y.getScore() ? 1 
+						: (x.getVertex() < y.getVertex() ? -1 : (x.getVertex() > y.getVertex() ? 1 : 0))));
 			}
 		});
 		
