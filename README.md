@@ -215,12 +215,16 @@ Also supported by hash tables: Search, Insert, Delete
 
 #### Algorithm Design Paradigms:
 - Divide & conquer:
-	- Example: mergesort
-	- Master Method, straightforward inductive correctness proofs
+	- Example: Mergesort
+	- Master Method, straightforward inductive correctness proof
 - Randomized algorithms:
-	- Example: quicksort
+	- Example: Quicksort
 - Greedy algorithms:
-	- Iteratively make "myopic" decisions, hope everything works out at the end.
-	- Example: Dijkstra’s shortest path algorithm - process each destination once, irrevocably.
-	- Danger: Most greedy algorithms are NOT correct: for example, Dijkstra with negative edge weights
-- Dynamic programming
+	- Iteratively make "myopic" locally optimal decisions, hope everything works out at the end.
+	- Examples:
+		- Dijkstra’s shortest path (process each destination once, irrevocably),
+		- Optimal caching (farthest-in-future algorithm).
+	- Danger: Most greedy algorithms are NOT correct: for example, Dijkstra with negative edge weights.
+- Dynamic programming:
+	- Main difference from greedy algorithms: After every stage, dynamic programming makes decisions based on all the decisions made in the previous stage, and may reconsider the previous stage's choices.
+	- Example: Sequence alignment
