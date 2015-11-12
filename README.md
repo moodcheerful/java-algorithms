@@ -212,3 +212,15 @@ Also supported by heaps: Select, Insert, Delete
 Also supported by hash tables: Search, Insert, Delete
 
 ---
+
+#### Algorithm Design Paradigms:
+- Divide & conquer:
+	- Example: mergesort
+	- Master Method, straightforward inductive correctness proofs
+- Randomized algorithms:
+	- Example: quicksort
+- Greedy algorithms:
+	- Iteratively make "myopic" decisions, hope everything works out at the end.
+	- Example: Dijkstra’s shortest path algorithm - process each destination once, irrevocably.
+	- Danger: Most greedy algorithms are NOT correct: for example, Dijkstra with negative edge weights
+- Dynamic programming
