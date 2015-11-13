@@ -214,7 +214,8 @@ Also supported by hash tables: Search, Insert, Delete
 ---
 #### Hash Tables
 
-- Clue to use Hash Table: repeated lookups (fast constant time)
+- Purpose: maintain a (possibly evolving) set of values
+- Clue to use Hash Table: __repeated lookups (fast constant time)__
 - Amazing Guarantee:  
 Insert, Delete, Search - all operations in __O(1)__ time, using a key, subject to 2 caveats:
 	1. Hash function properly implemented
@@ -222,8 +223,13 @@ Insert, Delete, Search - all operations in __O(1)__ time, using a key, subject t
 - Resolving collisions:
    - Solution 1: separate chaining (keep linked list in each bucket)
    - Solution 2: open addressing (only one object per bucket): linear probing, double hashing
-- Sample applications: de-duplication, the 2-sum problem, symbol tables in compilers, game tree exploration, maintaining a (possibly evolving) set of values.
-
+- Sample applications: de-duplication, the 2-sum problem, symbol tables in compilers, game tree exploration.
+- The Load of a hash table _alpha_ = # of objects in hash table divided by # of buckets of hash table
+	- load _alpha_ = O(1) is necessary condition for operations to run in constant time
+	- for good Hash Table performance, need to control load
+- Pathological Data can paralyze real-world systems by exploiting badly designed open source hash functions. Solutions:
+	1. cryptographic hash functions - infeasible to reverse engineer
+	2. randomization ("universal family of hash functions")
 ---
 
 #### Algorithm Design Paradigms:
