@@ -218,7 +218,7 @@ Also supported by hash tables: Search, Insert, Delete
 - Clue to use Hash Table: __repeated lookups (fast constant time)__
 - Amazing Guarantee:  
 __Insert, Delete, Search__ - all operations in __O(1)__ time, using a key, subject to 2 caveats:
-	1. Hash function properly implemented
+	1. Hash function properly implemented (provides a uniform distribution of hash values)
 	2. No worst bound guarantee for pathological data
 - Resolving collisions:
    - Solution 1: separate chaining (keep linked list in each bucket)
