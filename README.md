@@ -217,7 +217,7 @@ Also supported by hash tables: Search, Insert, Delete
 - Purpose: maintain a (possibly evolving) set of values
 - Clue to use Hash Table: __repeated lookups (fast constant time)__
 - Amazing Guarantee:  
-Insert, Delete, Search - all operations in __O(1)__ time, using a key, subject to 2 caveats:
+__Insert, Delete, Search__ - all operations in __O(1)__ time, using a key, subject to 2 caveats:
 	1. Hash function properly implemented
 	2. No worst bound guarantee for pathological data
 - Resolving collisions:
