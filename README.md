@@ -69,7 +69,7 @@ linearithmic | n log n | divide and conquer | mergesort
 quadratic | n<sup>2</sup> | double loop | check all pairs; bubble sort
 cubic | n<sup>3</sup> | triple loop | check all triples
 exponential | 2<sup>n</sup> | exhaustive search | check all subsets
-factorial | n! | brute-force | travelling salesman problem solved by brute force
+factorial | n! | brute-force | traveling salesman problem solved by brute force
 
 ---
 
@@ -130,7 +130,7 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 	- A directed graph has a topological order if and only if it is a directed acyclical graph (DAG).
 	- DFS __reverse postorder__ in a DAG is a topological sort.
 	- With DFS, topological sort time complexity is __O(V+E)__.
-	- Application: sequence tasks while respectng all precedence constraints.
+	- Application: sequence tasks while respecting all precedence constraints.
 
 - __Strongly Connected Components__:
 
@@ -152,8 +152,8 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 
 - Canonical use of Heap: fast way to do repeated minimum computations - perform Insert, Extract-Min in O(log n) time
 - Supported Operations:
-	- Insert: O(log n)
-	- Extract-Min: O(log n) - remove an object with a minimum key value, ties broken arbitrarily
+	- __Insert: O(log n)__
+	- __Extract-Min: O(log n)__ - remove an object with a minimum key value, ties broken arbitrarily
 	- Peek: O(1)  
 	also :
 	- Heapify: O(n) - batch insert n elements
@@ -165,7 +165,7 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 	- parent of i = [i/2]
 	- Extract-Min: swapping up last leaf and then bubbling down
 	- Insert: bubbling up from the last leaf
-- Applications: sorting, Dijkstra's Shortest Path algorithm, event manager, median maintenence
+- Applications: sorting, Dijkstra's Shortest Path algorithm, event manager, median maintenance
 
 ---
 
@@ -200,7 +200,7 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 Operations / Running Times | Balanced Search Tree | Sorted Array
 :--- | :--- | :---
 Search | Θ(log n) | Θ(log n)
-Select (given order statistic i) | O(log n) | O(1) | yes |
+Select (given order statistic i) | O(log n) | O(1)
 Min/Max | O(log n) | O(1)
 Predecessor/Successor (given pointer to a key) | O(log n) | O(1)
 Rank (# of keys <= a given value) | O(log n) | O(log n)
@@ -210,6 +210,19 @@ Delete | O(log n) | - (would take Θ(n) time)
 
 Also supported by heaps: Select, Insert, Delete  
 Also supported by hash tables: Search, Insert, Delete
+
+---
+#### Hash Tables
+
+- Clue to use Hash Table: repeated lookups (fast constant time)
+- Amazing Guarantee:  
+Insert, Delete, Search - all operations in __O(1)__ time, using a key, subject to 2 caveats:
+	1. Hash function properly implemented
+	2. No worst bound guarantee for pathological data
+- Resolving collisions:
+   - Solution 1: separate chaining (keep linked list in each bucket)
+   - Solution 2: open addressing (only one object per bucket): linear probing, double hashing
+- Sample applications: de-duplication, the 2-sum problem, symbol tables in compilers, game tree exploration, maintaining a (possibly evolving) set of values.
 
 ---
 
