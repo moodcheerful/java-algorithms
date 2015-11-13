@@ -228,11 +228,13 @@ Insert, Delete, Search - all operations in __O(1)__ time, using a key, subject t
 	- load _alpha_ = O(1) is necessary condition for operations to run in constant time
 	- for good Hash Table performance, need to control load
 - Pathological Data can paralyze real-world systems by exploiting badly designed open source hash functions. Solutions:
-	1. cryptographic hash functions - infeasible to reverse engineer
+	1. cryptographic hash functions (infeasible to reverse engineer)
 	2. randomization ("universal family of hash functions")
+
 ---
 
 #### Algorithm Design Paradigms:
+
 - Divide & conquer:
 	- Example: Mergesort
 	- Master Method, straightforward inductive correctness proof
