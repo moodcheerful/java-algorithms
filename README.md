@@ -24,6 +24,7 @@ Repo's tree view and algorithms' time complexities:
 │   │   │   │   ├── MaintainingMedian.java ------------- O(log i)
 │   │   │   │   ├── MergeSort.java --------------------- O(n log n)
 │   │   │   │   ├── QuickSort.java --------------------- O(n log n)
+│   │   │   │   ├── RomanToArabic.java ----------------- O(1)
 │   │   │   │   ├── SelectKthSmallest.java ------------- O(n)
 │   │   │   │   └── TopologicalSort.java --------------- O(V + E)
 │   │   │   └── utils
@@ -51,6 +52,7 @@ Repo's tree view and algorithms' time complexities:
 │               ├── MaintainingMedianTest.java
 │               ├── MergeSortTest.java
 │               ├── QuickSortTest.java
+│               ├── RomanToArabicTest.java
 │               ├── SelectKthSmallestTest.java
 │               └── TopologicalSortTest.java
 └── target
@@ -214,7 +216,7 @@ Also supported by hash tables: Search, Insert, Delete
 ---
 #### Hash Tables
 
-- Purpose: maintain a (possibly evolving) set of values
+- Purpose: maintain a (possibly evolving) set of values indexed by key
 - Clue to use Hash Table: __repeated lookups (fast constant time)__
 - Amazing Guarantee:  
 __Insert, Delete, Search__ - all operations in __O(1)__ time, using a key, subject to 2 caveats:
