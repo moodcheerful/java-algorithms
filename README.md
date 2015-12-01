@@ -23,6 +23,7 @@ Repo's tree view and algorithms' time complexities:
 │   │   │   │   ├── HeapSort.java ----------------------- O(n log n)
 │   │   │   │   ├── KnuthShuffle.java ------------------- O(n)
 │   │   │   │   ├── MaintainingMedian.java -------------- O(log i)
+│   │   │   │   ├── MarkovChainPageRank.java ------------ O(n^2)
 │   │   │   │   ├── MergeSort.java ---------------------- O(n log n)
 │   │   │   │   ├── QuickSort.java ---------------------- O(n log n)
 │   │   │   │   ├── RomanToArabic.java ------------------ O(1)
@@ -52,6 +53,7 @@ Repo's tree view and algorithms' time complexities:
 │               ├── HeapSortTest.java
 │               ├── KnuthShuffleTest.java
 │               ├── MaintainingMedianTest.java
+│               ├── MarkovChainPageRankTest.java
 │               ├── MergeSortTest.java
 │               ├── QuickSortTest.java
 │               ├── RomanToArabicTest.java
