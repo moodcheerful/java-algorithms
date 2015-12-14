@@ -10,25 +10,27 @@ Repo's tree view and algorithms' time complexities:
 │   ├── main
 │   │   ├── java
 │   │   │   ├── algorithms
-│   │   │   │   ├── BinarySearch.java ------------------- O(log n)
-│   │   │   │   ├── BitwiseOperations.java -------------- O(1)
-│   │   │   │   ├── BreadthFirstSearch.java ------------- O(V + E)
-│   │   │   │   ├── DecimalToBinary.java ---------------- O(1)
-│   │   │   │   ├── DepthFirstSearch.java --------------- O(V + E)
-│   │   │   │   ├── DepthFirstSearchNonRecursive.java --- O(V + E)
-│   │   │   │   ├── DijkstraShortestPath.java ----------- O(E log V)
-│   │   │   │   ├── DirectedGraphOrder.java ------------- O(V + E)
-│   │   │   │   ├── DynamicProgrammingCheckerboard.java - O(n^2)
-│   │   │   │   ├── GreatestCommonDivisor.java ---------- O((log min(a, b))^2)
-│   │   │   │   ├── HeapSort.java ----------------------- O(n log n)
-│   │   │   │   ├── KnuthShuffle.java ------------------- O(n)
-│   │   │   │   ├── MaintainingMedian.java -------------- O(log i)
-│   │   │   │   ├── MarkovChainPageRank.java ------------ O(n^2)
-│   │   │   │   ├── MergeSort.java ---------------------- O(n log n)
-│   │   │   │   ├── QuickSort.java ---------------------- O(n log n)
-│   │   │   │   ├── RomanToArabic.java ------------------ O(1)
-│   │   │   │   ├── SelectKthSmallest.java -------------- O(n)
-│   │   │   │   └── TopologicalSort.java ---------------- O(V + E)
+│   │   │   │   ├── BinarySearch.java ----------------------- O(log n)
+│   │   │   │   ├── BitwiseOperations.java ------------------ O(1)
+│   │   │   │   ├── BreadthFirstSearch.java ----------------- O(V + E)
+│   │   │   │   ├── DecimalToBinary.java -------------------- O(1)
+│   │   │   │   ├── DepthFirstSearch.java ------------------- O(V + E)
+│   │   │   │   ├── DepthFirstSearchNonRecursive.java ------- O(V + E)
+│   │   │   │   ├── DijkstraShortestPath.java --------------- O(E log V)
+│   │   │   │   ├── DirectedGraphOrder.java ----------------- O(V + E)
+│   │   │   │   ├── DynamicProgrammingCheckerboard.java ----- O(n^2)
+│   │   │   │   ├── GreatestCommonDivisor.java -------------- O((log min(a, b))^2)
+│   │   │   │   ├── HeapSort.java --------------------------- O(n log n)
+│   │   │   │   ├── KnuthShuffle.java ----------------------- O(n)
+│   │   │   │   ├── MaintainingMedian.java ------------------ O(log i)
+│   │   │   │   ├── MarkovChainPageRank.java ---------------- O(n^2)
+│   │   │   │   ├── MergeSort.java -------------------------- O(n log n)
+│   │   │   │   ├── ProbabilityDistributionsContinuous.java - O(1)
+│   │   │   │   ├── ProbabilityDistributionsDiscrete.java ---
+│   │   │   │   ├── QuickSort.java -------------------------- O(n log n)
+│   │   │   │   ├── RomanToArabic.java ---------------------- O(1)
+│   │   │   │   ├── SelectKthSmallest.java ------------------ O(n)
+│   │   │   │   └── TopologicalSort.java -------------------- O(V + E)
 │   │   │   └── utils
 │   │   │       ├── DirectedGraph.java
 │   │   │       ├── Graph.java
@@ -55,6 +57,8 @@ Repo's tree view and algorithms' time complexities:
 │               ├── MaintainingMedianTest.java
 │               ├── MarkovChainPageRankTest.java
 │               ├── MergeSortTest.java
+│               ├── ProbabilityDistributionsContinuousTest.java
+│               ├── ProbabilityDistributionsDiscreteTest.java
 │               ├── QuickSortTest.java
 │               ├── RomanToArabicTest.java
 │               ├── SelectKthSmallestTest.java
