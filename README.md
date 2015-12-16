@@ -26,7 +26,7 @@ Repo's tree view and algorithms' time complexities:
 │   │   │   │   ├── MarkovChainPageRank.java ---------------- O(n^2)
 │   │   │   │   ├── MergeSort.java -------------------------- O(n log n)
 │   │   │   │   ├── ProbabilityDistributionsContinuous.java - O(1)
-│   │   │   │   ├── ProbabilityDistributionsDiscrete.java ---
+│   │   │   │   ├── ProbabilityDistributionsDiscrete.java --- O(n)
 │   │   │   │   ├── QuickSort.java -------------------------- O(n log n)
 │   │   │   │   ├── RomanToArabic.java ---------------------- O(1)
 │   │   │   │   ├── SelectKthSmallest.java ------------------ O(n)
