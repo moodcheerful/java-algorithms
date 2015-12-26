@@ -1,7 +1,6 @@
-### Java Algorithms
----
+# Java Algorithms
 
-Repo's tree view and algorithms' time complexities:
+##### :evergreen_tree: Repo's tree view and :hourglass: Algorithms' time complexities:
 
 ```
 ├── README.md
@@ -68,7 +67,7 @@ Repo's tree view and algorithms' time complexities:
 
 ---
 
-#### Asymptotic Order of Growth (Big O notation):
+#### :arrow_heading_up: Asymptotic Order of Growth (Big O notation):
 
 Description | Order of Growth | Method | Example
 :-:|:-:|:-:|:-:
@@ -83,7 +82,7 @@ factorial | n! | brute-force | traveling salesman problem solved by brute force
 
 ---
 
-#### Array Sorting Algorithms:
+#### :arrows_counterclockwise: Array Sorting Algorithms:
 
 - __A Sorting Lower Bound__: every "comparison-based" sorting algorithm has worst-case running time of __Ω(n log n)__.
 - __Stable__ sort preserves the relative order of equal keys in the array.
@@ -107,7 +106,7 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 
 ---
 
-#### Graph Algorithms:
+#### :globe_with_meridians: Graph Algorithms:
 
 - __Breadth-First Search (BFS)__:
 	- __O(V+E)__ time complexity using a `queue` (FIFO)
@@ -158,9 +157,9 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 
 ---
 
-#### Heap (Priority Queue):
+#### :gem: Heap (Priority Queue):
 
-- Canonical use of Heap: fast way to do repeated minimum computations - perform Insert, Extract-Min in O(log n) time
+- Canonical use of Heap: :moneybag: __fast way to do repeated minimum computations__ - perform Insert, Extract-Min in O(log n) time
 - Supported Operations:
 	- __Insert: O(log n)__
 	- __Extract-Min: O(log n)__ - remove an object with a minimum key value, ties broken arbitrarily
@@ -179,9 +178,9 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 
 ---
 
-#### Balanced Binary Search Tree:
+#### :evergreen_tree: Balanced Binary Search Tree:
 
-- Raison d’etre: like sorted array + fast (logarithmic) inserts and deletes
+- Raison d’etre: :moneybag: __like sorted array + fast (logarithmic) inserts and deletes__
 - __Search Tree Property__: each node's key > all keys in the node's left subtree, and < all keys in the node's right subtree
 - Binary: each node has at most 2 children
 - The height of a BST:
@@ -222,11 +221,11 @@ Also supported by heaps: Select, Insert, Delete
 Also supported by hash tables: Search, Insert, Delete
 
 ---
-#### Hash Tables
+#### :bar_chart: Hash Tables
 
 - Purpose: maintain a (possibly evolving) set of values indexed by key
 - Clue to use Hash Table: __repeated lookups (fast constant time)__
-- Amazing Guarantee:  
+- :moneybag: Amazing Guarantee:  
 __Insert, Delete, Search__ - all operations in __O(1)__ time, using a key, subject to 2 caveats:
 	1. Hash function properly implemented (provides a uniform distribution of hash values)
 	2. No worst bound guarantee for pathological data
@@ -243,7 +242,7 @@ __Insert, Delete, Search__ - all operations in __O(1)__ time, using a key, subje
 
 ---
 
-#### Algorithm Design Paradigms:
+#### :books: Algorithm Design Paradigms:
 
 - Divide & conquer:
 	- Example: Mergesort
@@ -255,7 +254,7 @@ __Insert, Delete, Search__ - all operations in __O(1)__ time, using a key, subje
 	- Examples:
 		- Dijkstra’s shortest path (process each destination once, irrevocably)
 		- Optimal caching (Farthest-in-Future or Least Recently Used algorithm, given the locality of reference)
-	- Danger: Most greedy algorithms are NOT correct: for example, Dijkstra with negative edge weights.
+	- :bomb: Danger: Most greedy algorithms are NOT correct: for example, Dijkstra with negative edge weights.
 - Dynamic programming:
 	- Main difference from greedy algorithms: After every stage, dynamic programming makes decisions based on all the decisions made in the previous stage, and may reconsider the previous stage's choices.
 	- Example: Sequence alignment
