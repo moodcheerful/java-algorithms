@@ -24,6 +24,7 @@
 │   │   │   │   ├── MaintainingMedian.java ------------------ O(log i)
 │   │   │   │   ├── MarkovChainPageRank.java ---------------- O(n^2)
 │   │   │   │   ├── MergeSort.java -------------------------- O(n log n)
+│   │   │   │   ├── Palindrome.java ------------------------- O(n)
 │   │   │   │   ├── ProbabilityDistributionsContinuous.java - O(1)
 │   │   │   │   ├── ProbabilityDistributionsDiscrete.java --- O(n)
 │   │   │   │   ├── QuickSort.java -------------------------- O(n log n)
@@ -56,6 +57,7 @@
 │               ├── MaintainingMedianTest.java
 │               ├── MarkovChainPageRankTest.java
 │               ├── MergeSortTest.java
+│               ├── PalindromeTest.java
 │               ├── ProbabilityDistributionsContinuousTest.java
 │               ├── ProbabilityDistributionsDiscreteTest.java
 │               ├── QuickSortTest.java
