@@ -30,7 +30,7 @@
 │   │   │   │   ├── ProbabilityDistributionsDiscrete.java --- O(n)
 │   │   │   │   ├── QuickSort.java -------------------------- O(n log n)
 │   │   │   │   ├── RomanToArabic.java ---------------------- O(1)
-│   │   │   │   ├── ROT13.java ------------------------------ O(n)
+│   │   │   │   ├── ROT13Cipher.java ------------------------ O(n)
 │   │   │   │   ├── SelectKthSmallest.java ------------------ O(n)
 │   │   │   │   └── TopologicalSort.java -------------------- O(V + E)
 │   │   │   └── utils
@@ -65,7 +65,7 @@
 │               ├── ProbabilityDistributionsDiscreteTest.java
 │               ├── QuickSortTest.java
 │               ├── RomanToArabicTest.java
-│               ├── ROT13Test.java
+│               ├── ROT13CipherTest.java
 │               ├── SelectKthSmallestTest.java
 │               └── TopologicalSortTest.java
 └── target

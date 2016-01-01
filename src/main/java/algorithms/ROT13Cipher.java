@@ -14,11 +14,11 @@ package algorithms;
  * 
  * Linear time complexity.
  * 
- * One-liner in bash:
+ * A one-liner in bash:
  * echo "The Quick Brown Fox Jumps Over The Lazy Dog" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
  * 
  */
-public class ROT13 {
+public class ROT13Cipher {
 
 	public static String rot13(String input) {
 
