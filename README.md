@@ -1,4 +1,4 @@
-# Java Algorithms
+## :fire: :+1: :interrobang: Common CS Algorithms :interrobang: :+1: :fire: </br> implemented in Java and tested in JUnit 
 
 ##### :evergreen_tree: Repo's tree view and :hourglass: Algorithms' time complexities:
 
@@ -26,6 +26,7 @@
 │   │   │   │   ├── MarkovChainPageRank.java ---------------- O(n^2)
 │   │   │   │   ├── MergeSort.java -------------------------- O(n log n)
 │   │   │   │   ├── Palindrome.java ------------------------- O(n)
+│   │   │   │   ├── PrimeSieve.java ------------------------- O(n log(log n))
 │   │   │   │   ├── ProbabilityDistributionsContinuous.java - O(1)
 │   │   │   │   ├── ProbabilityDistributionsDiscrete.java --- O(n)
 │   │   │   │   ├── QuickSort.java -------------------------- O(n log n)
@@ -61,6 +62,7 @@
 │               ├── MarkovChainPageRankTest.java
 │               ├── MergeSortTest.java
 │               ├── PalindromeTest.java
+│               ├── PrimeSieveTest.java
 │               ├── ProbabilityDistributionsContinuousTest.java
 │               ├── ProbabilityDistributionsDiscreteTest.java
 │               ├── QuickSortTest.java
