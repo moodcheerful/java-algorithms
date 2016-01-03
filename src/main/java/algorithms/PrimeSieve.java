@@ -6,12 +6,28 @@ package algorithms;
  * A prime number is a natural number greater than 1 that has exactly two divisors: 
  * 1 and itself.
  * 
- * Time complexity is O(n log(log n)), 
- * since number of iterations is
+ * Prime number theorem: number of primes ~ n / log n
+ * 
+ * Time complexity is O(n log(log n)):
+ *  
+ * Because the number of iterations is
  * = n + n/2 + n/3 + n/5 + n/7 + n/11 + ... + n/p = 
  * = n * (1 + 1/2 + 1/3 + 1/5 + 1/7 + 1/11 + ... + 1/p), 
  * = n * sum of reciprocals of primes up to p = Math.sqrt(n), 
  * and the prime harmonic series asymptotically approaches log(log n).
+ * 
+ * Memory complexity is O(N).
+ * 
+ * This implementation is limited in the sieving range it can handle to the amount of 
+ * RAM memory available. For larger n we need to implement a page segmented sieve algorithm.
+ * 
+ * For example, for n = 1,000,000,000:
+ * 
+ * number of primes = 50,847,534
+ * boolean[n] isNonPrime ≈ 1 * n bytes ≈ 1 Gb
+ * int[count] primes ≈ 4 * count bytes ≈ 0.2 Gb
+ * 1.2 Gb of RAM needs to be allocated to the program to avoid OutOfMemoryError 
+ * Exception (requested array size exceeds VM limit).
  * 
  */
 public class PrimeSieve {
