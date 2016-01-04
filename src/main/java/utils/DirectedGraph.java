@@ -1,7 +1,7 @@
 package utils;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *  A directed graph of vertices named 0 through N - 1. 

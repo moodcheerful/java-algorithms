@@ -1,4 +1,4 @@
-## :fire: :+1: :interrobang: Common CS Algorithms :interrobang: :+1: :fire: </br> implemented in Java and tested in JUnit 
+## :fire: :+1: :interrobang: Common CS Algorithms :interrobang: :+1: :fire: </br> implemented in Java and tested in JUnit
 
 ##### :evergreen_tree: Repo's tree view and :hourglass: Algorithms' time complexities:
 
@@ -8,32 +8,38 @@
 ├── src
 │   ├── main
 │   │   ├── java
-│   │   │   ├── algorithms
-│   │   │   │   ├── BinarySearch.java ----------------------- O(log n)
-│   │   │   │   ├── BitwiseOperations.java ------------------ O(1)
+│   │   │   ├── graphs
 │   │   │   │   ├── BreadthFirstSearch.java ----------------- O(V + E)
-│   │   │   │   ├── DecimalToBinary.java -------------------- O(1)
 │   │   │   │   ├── DepthFirstSearch.java ------------------- O(V + E)
 │   │   │   │   ├── DepthFirstSearchNonRecursive.java ------- O(V + E)
 │   │   │   │   ├── DijkstraShortestPath.java --------------- O(E log V)
 │   │   │   │   ├── DirectedGraphOrder.java ----------------- O(V + E)
-│   │   │   │   ├── DynamicProgrammingCheckerboard.java ----- O(n^2)
+│   │   │   │   └── TopologicalSort.java -------------------- O(V + E)
+│   │   │   ├── numerical
+│   │   │   │   ├── BitwiseOperations.java ------------------ O(1)
+│   │   │   │   ├── DecimalToBinary.java -------------------- O(1)
 │   │   │   │   ├── GreatestCommonDivisor.java -------------- O((log min(a, b))^2)
+│   │   │   │   ├── PrimeSieve.java ------------------------- O(n log(log n))
+│   │   │   │   └── RomanToArabic.java ---------------------- O(1)
+│   │   │   ├── optimization
+│   │   │   │   ├── DynamicProgrammingCheckerboard.java ----- O(n^2)
+│   │   │   │   ├── MaintainingMedian.java ------------------ O(log n)
+│   │   │   │   └── MarkovChainPageRank.java ---------------- O(n^2)
+│   │   │   ├── searching
+│   │   │   │   ├── BinarySearch.java ----------------------- O(log n)
+│   │   │   │   └── SelectKthSmallest.java ------------------ O(n)
+│   │   │   ├── sorting
 │   │   │   │   ├── HeapSort.java --------------------------- O(n log n)
 │   │   │   │   ├── KnuthShuffle.java ----------------------- O(n)
-│   │   │   │   ├── LZWCompression.java --------------------- O(n)
-│   │   │   │   ├── MaintainingMedian.java ------------------ O(log i)
-│   │   │   │   ├── MarkovChainPageRank.java ---------------- O(n^2)
 │   │   │   │   ├── MergeSort.java -------------------------- O(n log n)
-│   │   │   │   ├── Palindrome.java ------------------------- O(n)
-│   │   │   │   ├── PrimeSieve.java ------------------------- O(n log(log n))
+│   │   │   │   └── QuickSort.java -------------------------- O(n log n)
+│   │   │   ├── statistics
 │   │   │   │   ├── ProbabilityDistributionsContinuous.java - O(1)
-│   │   │   │   ├── ProbabilityDistributionsDiscrete.java --- O(n)
-│   │   │   │   ├── QuickSort.java -------------------------- O(n log n)
-│   │   │   │   ├── RomanToArabic.java ---------------------- O(1)
-│   │   │   │   ├── ROT13Cipher.java ------------------------ O(n)
-│   │   │   │   ├── SelectKthSmallest.java ------------------ O(n)
-│   │   │   │   └── TopologicalSort.java -------------------- O(V + E)
+│   │   │   │   └── ProbabilityDistributionsDiscrete.java --- O(n)
+│   │   │   ├── strings
+│   │   │   │   ├── LZWCompression.java --------------------- O(n)
+│   │   │   │   ├── Palindrome.java ------------------------- O(n)
+│   │   │   │   └── ROT13Cipher.java ------------------------ O(n)
 │   │   │   └── utils
 │   │   │       ├── DirectedGraph.java
 │   │   │       ├── Graph.java
@@ -44,32 +50,38 @@
 │   │       └── log4j.properties
 │   └── test
 │       └── java
-│           └── algorithms
-│               ├── BinarySearchTest.java
-│               ├── BitwiseOperationsTest.java
-│               ├── BreadthFirstSearchTest.java
-│               ├── DecimalToBinaryTest.java
-│               ├── DepthFirstSearchNonRecursiveTest.java
-│               ├── DepthFirstSearchTest.java
-│               ├── DijkstraShortestPathTest.java
-│               ├── DirectedGraphOrderTest.java
-│               ├── DynamicProgrammingCheckerboardTest.java
-│               ├── GreatestCommonDivisorTest.java
-│               ├── HeapSortTest.java
-│               ├── KnuthShuffleTest.java
+│           ├── graphs
+│           │   ├── BreadthFirstSearchTest.java
+│           │   ├── DepthFirstSearchNonRecursiveTest.java
+│           │   ├── DepthFirstSearchTest.java
+│           │   ├── DijkstraShortestPathTest.java
+│           │   ├── DirectedGraphOrderTest.java
+│           │   └── TopologicalSortTest.java
+│           ├── numerical
+│           │   ├── BitwiseOperationsTest.java
+│           │   ├── DecimalToBinaryTest.java
+│           │   ├── GreatestCommonDivisorTest.java
+│           │   ├── PrimeSieveTest.java
+│           │   └── RomanToArabicTest.java
+│           ├── optimization
+│           │   ├── DynamicProgrammingCheckerboardTest.java
+│           │   ├── MaintainingMedianTest.java
+│           │   └── MarkovChainPageRankTest.java
+│           ├── searching
+│           │   ├── BinarySearchTest.java
+│           │   └── SelectKthSmallestTest.java
+│           ├── sorting
+│           │   ├── HeapSortTest.java
+│           │   ├── KnuthShuffleTest.java
+│           │   ├── MergeSortTest.java
+│           │   └── QuickSortTest.java
+│           ├── statistics
+│           │   ├── ProbabilityDistributionsContinuousTest.java
+│           │   └── ProbabilityDistributionsDiscreteTest.java
+│           └── strings
 │               ├── LZWCompressionTest.java
-│               ├── MaintainingMedianTest.java
-│               ├── MarkovChainPageRankTest.java
-│               ├── MergeSortTest.java
 │               ├── PalindromeTest.java
-│               ├── PrimeSieveTest.java
-│               ├── ProbabilityDistributionsContinuousTest.java
-│               ├── ProbabilityDistributionsDiscreteTest.java
-│               ├── QuickSortTest.java
-│               ├── RomanToArabicTest.java
-│               ├── ROT13CipherTest.java
-│               ├── SelectKthSmallestTest.java
-│               └── TopologicalSortTest.java
+│               └── ROT13CipherTest.java
 └── target
 ```
 
