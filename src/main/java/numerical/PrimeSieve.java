@@ -7,6 +7,8 @@ package numerical;
  * 1 and itself.
  * 
  * Prime number theorem: number of primes ~ n / log n
+ * (the probability that a given, randomly chosen number n is prime is inversely 
+ * proportional to its number of digits, or to the logarithm of n)
  * 
  * Time complexity is O(n log(log n)):
  *  
