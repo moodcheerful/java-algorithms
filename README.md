@@ -19,6 +19,7 @@
 │   │   │   │   ├── BitwiseOperations.java ------------------ O(1)
 │   │   │   │   ├── DecimalToBinary.java -------------------- O(1)
 │   │   │   │   ├── GreatestCommonDivisor.java -------------- O((log min(a, b))^2)
+│   │   │   │   ├── Primality.java -------------------------- O(n^1/2)
 │   │   │   │   ├── PrimeSieve.java ------------------------- O(n log(log n))
 │   │   │   │   └── RomanToArabic.java ---------------------- O(1)
 │   │   │   ├── optimization
@@ -61,6 +62,7 @@
 │           │   ├── BitwiseOperationsTest.java
 │           │   ├── DecimalToBinaryTest.java
 │           │   ├── GreatestCommonDivisorTest.java
+│           │   ├── PrimalityTest.java
 │           │   ├── PrimeSieveTest.java
 │           │   └── RomanToArabicTest.java
 │           ├── optimization
