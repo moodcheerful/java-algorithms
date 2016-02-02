@@ -28,6 +28,7 @@
 │   │   │   │   └── MarkovChainPageRank.java ---------------- O(n^2)
 │   │   │   ├── searching
 │   │   │   │   ├── BinarySearch.java ----------------------- O(log n)
+│   │   │   │   ├── BinarySearchTree.java ------------------- O(height)
 │   │   │   │   └── SelectKthSmallest.java ------------------ O(n)
 │   │   │   ├── sorting
 │   │   │   │   ├── HeapSort.java --------------------------- O(n log n)
@@ -71,6 +72,7 @@
 │           │   └── MarkovChainPageRankTest.java
 │           ├── searching
 │           │   ├── BinarySearchTest.java
+│           │   ├── BinarySearchTreeTest.java
 │           │   └── SelectKthSmallestTest.java
 │           ├── sorting
 │           │   ├── HeapSortTest.java
@@ -156,7 +158,6 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 		- __Reverse postorder__: __topological sort__
 
 - __Topological Sort__:
-
 	- Given a directed graph, put the vertices in order such that all its directed edges point from a vertex earlier in the order to a vertex later in the order.
 	- A directed graph has a topological order if and only if it is a directed acyclical graph (DAG).
 	- DFS __reverse postorder__ in a DAG is a topological sort.
@@ -164,14 +165,11 @@ Radix Sort | O(nk) | O(n+k) | Yes | (Non-comparison sort)
 	- Application: sequence tasks while respecting all precedence constraints.
 
 - __Strongly Connected Components__:
-
 	- strongly connected components (SCCs) of a directed graph G are the equivalence classes of the relation:   
 	u<->v <==> there exists a path u->v and a path v->u in G
 	- __Kosaraju’s Two-Pass Algorithm__ computes SCCs in 2*DFS = __O(V+E)__ time.
 
-
 - __Dijkstra's Shortest Path algorithm__:
-
 	- computes the shortest path in an __edge-weighted__ directed graph with non-negative weights
 	- canonical use of __Heap__ data structure: fast way to do repeated minimum computations
 	- time complexity: __O(E log V)__
