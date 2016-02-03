@@ -1,4 +1,6 @@
-package searching;
+package graphs;
+
+import graphs.BinarySearchTree;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,12 +9,9 @@ import java.util.List;
 import java.util.Random;
 
 import org.apache.log4j.Logger;
-
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import searching.BinarySearchTree;
 
 public class BinarySearchTreeTest {
 

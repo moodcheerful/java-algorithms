@@ -1,4 +1,4 @@
-package searching;
+package graphs;
 
 /*
  * Binary Search Tree implementation.

@@ -9,6 +9,7 @@
 │   ├── main
 │   │   ├── java
 │   │   │   ├── graphs
+│   │   │   │   ├── BinarySearchTree.java ------------------- O(height)
 │   │   │   │   ├── BreadthFirstSearch.java ----------------- O(V + E)
 │   │   │   │   ├── DepthFirstSearch.java ------------------- O(V + E)
 │   │   │   │   ├── DepthFirstSearchNonRecursive.java ------- O(V + E)
@@ -28,7 +29,6 @@
 │   │   │   │   └── MarkovChainPageRank.java ---------------- O(n^2)
 │   │   │   ├── searching
 │   │   │   │   ├── BinarySearch.java ----------------------- O(log n)
-│   │   │   │   ├── BinarySearchTree.java ------------------- O(height)
 │   │   │   │   └── SelectKthSmallest.java ------------------ O(n)
 │   │   │   ├── sorting
 │   │   │   │   ├── HeapSort.java --------------------------- O(n log n)
@@ -53,6 +53,7 @@
 │   └── test
 │       └── java
 │           ├── graphs
+│           │   ├── BinarySearchTreeTest.java
 │           │   ├── BreadthFirstSearchTest.java
 │           │   ├── DepthFirstSearchNonRecursiveTest.java
 │           │   ├── DepthFirstSearchTest.java
@@ -72,7 +73,6 @@
 │           │   └── MarkovChainPageRankTest.java
 │           ├── searching
 │           │   ├── BinarySearchTest.java
-│           │   ├── BinarySearchTreeTest.java
 │           │   └── SelectKthSmallestTest.java
 │           ├── sorting
 │           │   ├── HeapSortTest.java
