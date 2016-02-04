@@ -19,6 +19,7 @@
 │   │   │   ├── numerical
 │   │   │   │   ├── BitwiseOperations.java ------------------ O(1)
 │   │   │   │   ├── DecimalToBinary.java -------------------- O(1)
+│   │   │   │   ├── ExponentiationBySquaring.java ----------- O(log n)
 │   │   │   │   ├── GreatestCommonDivisor.java -------------- O((log min(a, b))^2)
 │   │   │   │   ├── Primality.java -------------------------- O(n^1/2)
 │   │   │   │   ├── PrimeSieve.java ------------------------- O(n log(log n))
@@ -63,6 +64,7 @@
 │           ├── numerical
 │           │   ├── BitwiseOperationsTest.java
 │           │   ├── DecimalToBinaryTest.java
+│           │   ├── ExponentiationBySquaringTest.java
 │           │   ├── GreatestCommonDivisorTest.java
 │           │   ├── PrimalityTest.java
 │           │   ├── PrimeSieveTest.java
