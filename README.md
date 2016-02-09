@@ -26,6 +26,7 @@
 │   │   │   │   └── RomanToArabic.java ---------------------- O(1)
 │   │   │   ├── optimization
 │   │   │   │   ├── DynamicProgrammingCheckerboard.java ----- O(n^2)
+│   │   │   │   ├── DynamicProgrammingKnapsack.java --------- O(N * W)
 │   │   │   │   ├── MaintainingMedian.java ------------------ O(log n)
 │   │   │   │   └── MarkovChainPageRank.java ---------------- O(n^2)
 │   │   │   ├── searching
@@ -71,6 +72,7 @@
 │           │   └── RomanToArabicTest.java
 │           ├── optimization
 │           │   ├── DynamicProgrammingCheckerboardTest.java
+│           │   ├── DynamicProgrammingKnapsackTest.java
 │           │   ├── MaintainingMedianTest.java
 │           │   └── MarkovChainPageRankTest.java
 │           ├── searching
