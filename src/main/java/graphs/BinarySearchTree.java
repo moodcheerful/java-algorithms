@@ -275,6 +275,27 @@ public class BinarySearchTree<Key extends Comparable<Key>> {
 			return keys;
 		}
 		Deque<Node> stack = new ArrayDeque<>();
+		while (x != null || !stack.isEmpty()) {
+			if (x != null) {
+				stack.push(x);
+				x = x.left;
+			} else {
+				x = stack.pop();
+				// visited node
+				keys.add(x.key);
+				x = x.right;
+			}
+		}
+		return keys;
+	}
+	
+	// in-order traversal method using a stack
+	private List<Key> inOrder2(Node x) {
+		List<Key> keys = new ArrayList<>();
+		if (x == null) {
+			return keys;
+		}
+		Deque<Node> stack = new ArrayDeque<>();
 		pushAllLeft(stack, x);
 		while (!stack.isEmpty()) {
 			Node smallest = stack.pop();
@@ -294,7 +315,7 @@ public class BinarySearchTree<Key extends Comparable<Key>> {
 	}
 	
 	// in-order traversal method using recursion
-	private List<Key> inOrder2(Node x) {
+	private List<Key> inOrder3(Node x) {
 		List<Key> keys = new LinkedList<Key>();
 		if (x == null) {
 			return keys;
