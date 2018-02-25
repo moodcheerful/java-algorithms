@@ -4,7 +4,7 @@ package graphs;
  * Binary Search Tree implementation.
  * 
  * 1. Binary Search Tree is NOT balanced
- * 2. No dublicate keys allowed
+ * 2. No duplicate keys allowed
  * 
  * Time complexity:
  * 1. get, put, delete, findMin/findMax, predecessor/successor methods: O(height), 
@@ -31,6 +31,9 @@ package graphs;
  * 
  */
 
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -265,7 +268,33 @@ public class BinarySearchTree<Key extends Comparable<Key>> {
 		return inOrder(root);
 	}
 
+	// in-order traversal method using a stack
 	private List<Key> inOrder(Node x) {
+		List<Key> keys = new ArrayList<>();
+		if (x == null) {
+			return keys;
+		}
+		Deque<Node> stack = new ArrayDeque<>();
+		pushAllLeft(stack, x);
+		while (!stack.isEmpty()) {
+			Node smallest = stack.pop();
+			if (smallest != null) {
+				keys.add(smallest.key);
+				pushAllLeft(stack, smallest.right);
+			}
+		}
+		return keys;
+	}
+	
+	private void pushAllLeft(Deque<Node> stack, Node x) {
+		while (x != null) {
+			stack.push(x);
+			x = x.left;
+		}
+	}
+	
+	// in-order traversal method using recursion
+	private List<Key> inOrder2(Node x) {
 		List<Key> keys = new LinkedList<Key>();
 		if (x == null) {
 			return keys;
