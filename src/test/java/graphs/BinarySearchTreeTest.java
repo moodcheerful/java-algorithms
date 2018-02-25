@@ -29,12 +29,12 @@ public class BinarySearchTreeTest {
 	 *   1     6
 	 *       /   \
 	 *     4      16
-	 *    / \    /   \
-	 *   3   5  11    17
-	 *        \   \
-	 *         7   12
-	 *          \    \
-	 *           9    14
+	 *    / \    /  \
+	 *   3   5  11   17
+	 *         /  \
+	 *        7    12
+	 *         \     \
+	 *          9     14
 	 *           
 	 */
 	@BeforeClass
