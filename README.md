@@ -74,6 +74,7 @@
 │           ├── optimization
 │           │   ├── DynamicProgrammingCheckerboardTest.java
 │           │   ├── DynamicProgrammingKnapsackTest.java
+│           │   ├── GameOfLifeTest.java
 │           │   ├── MaintainingMedianTest.java
 │           │   └── MarkovChainPageRankTest.java
 │           ├── searching
