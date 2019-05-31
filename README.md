@@ -27,6 +27,7 @@
 │   │   │   ├── optimization
 │   │   │   │   ├── DynamicProgrammingCheckerboard.java ----- O(n^2)
 │   │   │   │   ├── DynamicProgrammingKnapsack.java --------- O(N * W)
+│   │   │   │   ├── GameOfLife.java ------------------------- O(n^2)
 │   │   │   │   ├── MaintainingMedian.java ------------------ O(log n)
 │   │   │   │   └── MarkovChainPageRank.java ---------------- O(n^2)
 │   │   │   ├── searching
