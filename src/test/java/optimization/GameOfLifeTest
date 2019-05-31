@@ -1,0 +1,55 @@
+import org.junit.Test;
+
+import static junit.framework.TestCase.assertTrue;
+import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+
+/*
+git init
+git add *
+git commit -am "foo"
+git reset --hard
+*/
+
+public class GameOfLifeTest {
+
+    boolean[][] input = new boolean[][]{{false, true, false}, {true, true, false}, {true, false, true}};
+    boolean[][] output = new boolean[][]{{true, true, false}, {true, false, true}, {true, false, false}};
+
+    @Test
+    public void isAlive() {
+        GameOfLife gameOfLife = new GameOfLife(input);
+        assertFalse(gameOfLife.isAlive(-1, 0));
+    }
+
+    @Test
+    public void isAlive2() {
+        GameOfLife gameOfLife = new GameOfLife(input);
+        assertTrue(gameOfLife.isAlive(0, 1));
+    }
+
+    @Test
+    public void isInBound() {
+        GameOfLife gameOfLife = new GameOfLife(new boolean[][]{});
+        assertFalse(gameOfLife.isInBound(0, 0));
+    }
+
+    @Test
+    public void isInBound2() {
+        GameOfLife gameOfLife = new GameOfLife(new boolean[][]{{true}});
+        assertTrue(gameOfLife.isInBound(0, 0));
+    }
+
+    @Test
+    public void countNeighbors() {
+        GameOfLife gameOfLife = new GameOfLife(input);
+        assertEquals(3, gameOfLife.countNeighbors(0, 0));
+    }
+
+    @Test
+    public void transform() {
+        GameOfLife gameOfLife = new GameOfLife(input);
+        assertArrayEquals(output, gameOfLife.transform());
+    }
+}
